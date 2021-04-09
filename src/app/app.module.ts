@@ -8,7 +8,12 @@ import { ProductItemComponent } from './order/product/product-item/product-item.
 import { ProductDetailsComponent } from './order/product/product-details/product-details.component';
 import { OrderItemComponent } from './order/order-item/order-item.component';
 import { DocumentsComponent } from './order/documents/documents.component';
-import { InvoiceComponent } from './order/documents/invoices/invoice/invoice.component';
+import { InvoiceComponent } from './order/documents/create_invoice/invoice/invoice.component';
+import { ModalComponent } from './common/modal/modal.component';
+import { CreateInvoiceProductsComponent } from './order/documents/create_invoice/create-invoice-products/create-invoice-products.component';
+import { CreateInvoiceDataClitentComponent } from './order/documents/create_invoice/create-invoice-data-clitent/create-invoice-data-clitent.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ErrorHandlerInterceptor } from './core/http/error.interceptor';
 
 @NgModule({
   declarations: [
@@ -18,13 +23,17 @@ import { InvoiceComponent } from './order/documents/invoices/invoice/invoice.com
     ProductDetailsComponent,
     OrderItemComponent,
     DocumentsComponent,
-    InvoiceComponent
+    InvoiceComponent,
+    ModalComponent,
+    CreateInvoiceProductsComponent,
+    CreateInvoiceDataClitentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorHandlerInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

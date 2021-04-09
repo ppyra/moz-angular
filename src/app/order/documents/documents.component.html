@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#invoiceOffCanvas" aria-controls="invoiceOffCanvas">Szczegóły</button>
+                    <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="offcanvas" (click)="openInvoice($event)">Szczegóły</button>
                 </div>
             </div>
 
@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-2">
                     <!-- <button type="button" class="btn btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#invoiceOffCanvas" aria-controls="invoiceOffCanvas">Szczegółyyy</button> -->
-                    <button class="btn btn-primary " type="button" data-bs-dismiss="offcanvas" (click)="openInvoice($event)">Invoice VAT</button>
+                    <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="offcanvas" (click)="openInvoice($event)">Szczegóły</button>
                 </div>
             </div>
             <template #dynamicComponentContainer></template>
