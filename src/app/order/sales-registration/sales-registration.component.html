@@ -2,20 +2,20 @@
 
     <div class="m-4">
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-            <ol class="breadcrumb fs-6 fw-bold">
-                <li class="breadcrumb-item active"><a href="#">EKATALOG</a></li>
-                <li class="breadcrumb-item" aria-current="page">MODUŁ OBSŁUGI ZAMÓWIEŃ</li>
-                <li class="breadcrumb-item active"><a href="#">SZCZEGÓŁY ZLECENIA</a></li>
+            <ol class="breadcrumb fs-6 fw-bold text-uppercase">
+                <li class="breadcrumb-item active"><a href="#">{{ 'ekatalog' | translate }}</a></li>
+                <li class="breadcrumb-item" aria-current="page">{{ 'moz' | translate }}</li>
+                <li class="breadcrumb-item active"><a href="#">{{ 'order_details' | translate}}</a></li>
             </ol>
         </nav>
 
-        <p class="d-inline fs-4 fw-bold text-center">ZLECENIE-NR.123 456 789
-            <span type="button" class="d-inline btn btn-warning btn-sm rounded-pill text-white text-uppercase m-3 btn-sm-header">W REALIZACJI</span>
+        <p class="d-inline fs-4 fw-bold text-center">{{ "order.order_nr" | translate}} 123 456 789
+            <span type="button" class="d-inline btn btn-warning btn-sm rounded-pill text-white text-uppercase m-3 btn-sm-header">{{ "order.in_progress" | translate}}</span>
         </p>
 
         <order-item></order-item>
 
-        <p class="mt-4 fs-4 fw-bold">Sprzedaż z odbiorem w sklepie</p>
+        <p class="mt-4 fs-4 fw-bold">{{ "order.collection_in_store" | translate }}</p>
 
         <product-item></product-item>
         <product-details></product-details>
@@ -25,66 +25,59 @@
         <create-invoice-products></create-invoice-products>
         <create-invoice-data-clitent></create-invoice-data-clitent>
 
-        <h1 translate>Title</h1>
-
-        <div>
-            {{ 'Intro' | translate }}
-        </div>
-
         <div class="row gx-5">
             <div class="col-6">
-                <p class="mt-4 fs-4 fw-bold">Podsumowanie</p>
+                <p class="mt-4 fs-4 fw-bold">{{ "summary.title" | translate }}</p>
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex flex-row justify-content-between">
-                            <label for="name" class="control-label">Wartość towarów w koszyku</label>
-                            <label class="control-label" id="name">10 997,00 zł</label>
+                            <label for="value_products_in_basket" class="control-label">{{ "summary.value_products_in_basket" | translate }}</label>
+                            <label class="control-label" id="value_products_in_basket">10 997,00 zł</label>
                         </div>
                         <div class="d-flex flex-row justify-content-between">
-                            <label for="name" class="control-label">Wartość gwarancji w koszyku</label>
-                            <label class="control-label" id="name">380,00 zł</label>
+                            <label for="value_guarantee_in_basket" class="control-label">{{ "summary.value_guarantee_in_basket" | translate }}</label>
+                            <label class="control-label" id="value_guarantee_in_basket">380,00 zł</label>
                         </div>
                         <div class="d-flex flex-row justify-content-between">
-                            <label for="name" class="control-label">Wartość usług w koszyku</label>
+                            <label for="name" class="control-label">{{ "summary.value_services_in_basket" | translate }}</label>
                             <label class="control-label" id="name">79,00 zł</label>
                         </div>
                         <div class="d-flex flex-row justify-content-between">
-                            <label for="name" class="control-label">Naliczone kody rabatowe</label>
-                            <label class="control-label" id="name">-1 000,00 zł</label>
+                            <label for="value_services_in_basket" class="control-label">{{ "summary.discount_codes_charged" | translate }}</label>
+                            <label class="control-label" id="value_services_in_basket">-1 000,00 zł</label>
                         </div>
                         <div class="d-flex flex-row justify-content-between">
-                            <label for="name" class="control-label">Naliczone przeceny</label>
-                            <label class="control-label" id="name">0,00 zł</label>
+                            <label for="discount_charged" class="control-label">{{ "summary.discount_charged" | translate }}</label>
+                            <label class="control-label" id="discount_charged">0,00 zł</label>
                         </div>
                         <hr class="w-100">
                         <div class="d-flex flex-row justify-content-between fw-bold">
-                            <label for="name" class="control-label">Razem</label>
-                            <label class="control-label" id="name">11 456,00 zł</label>
+                            <label for="sum" class="control-label">{{ "product.sum" | translate }}</label>
+                            <label class="control-label" id="sum">11 456,00 zł</label>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-6">
-                <p class="mt-4 fs-4 fw-bold">Płatność</p>
+                <p class="mt-4 fs-4 fw-bold">{{ "pay.title" | translate }}</p>
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex flex-row justify-content-between">
-                            <label for="name" class="control-label">Kartą</label>
-                            <label class="control-label" id="name">0,00 zł</label>
+                            <label for="card" class="control-label">{{ "pay.card" | translate }}</label>
+                            <label class="control-label" id="card">0,00 zł</label>
                         </div>
                         <div class="d-flex flex-row justify-content-between">
-                            <label for="name" class="control-label">Gotówką</label>
-                            <label class="control-label" id="name">11 456,00 zł</label>
+                            <label for="cash" class="control-label">{{ "pay.cash" | translate }}</label>
+                            <label class="control-label" id="cash">11 456,00 zł</label>
                         </div>
                         <hr class="w-100">
                         <div class="d-flex flex-row justify-content-between fw-bold">
-                            <label for="name" class="control-label">Całkowita wartość zamówienia</label>
-                            <label class="control-label" id="name">11 456,00 zł</label>
+                            <label for="tital_value" class="control-label">{{ "pay.tital_value" | translate }}</label>
+                            <label class="control-label" id="tital_value">11 456,00 zł</label>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>

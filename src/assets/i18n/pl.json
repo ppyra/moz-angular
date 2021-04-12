@@ -1,4 +1,52 @@
 {
-    "Title": "Translation example",
-    "Intro": "Hello I am Arthur, I am 42 years old."
+    "ekatalog": "EKATALOG",
+    "moz": "Moduł Obsługi Zamówień",
+    "order_details": "SZCZEGÓŁY ZLECENIA",
+    "ignore": "Anuluj",
+    "no": "nr",
+    "order": {
+        "collection_in_store": "Sprzedaż z odbiorem w sklepie",
+        "order_nr": "Zlecenie Nr.",
+        "date_issue": "Data wystawienia",
+        "sold_in": "Sprzedano w",
+        "fiscalization": "Fiskalizacja",
+        "issuing_worker": "Pracownik wystawiający",
+        "buyer": "Nabywca",
+        "issue_an_invoice": "Wystaw fakture",
+        "settlement_of_accounts": "Rozlicz należność",
+        "add_guarantee": "Dodaj gwarancję",
+        "see_documents": "Zobacz dokumenty",
+        "in_progress": "W realizacji"
+    },
+    "product": {
+        "count": "Liczba",
+        "sum": "Razem",
+        "status": "Status",
+        "details": "Szczegóły",
+        "price": "Cena",
+        "catalog_price": "Cena kartalogowa",
+        "guarantee": "Gwarancja",
+        "service": "Usługa"
+    },
+    "summary": {
+        "title": "Podsumowanie",
+        "value_products_in_basket": "Wartość towarów w koszyku",
+        "value_guarantee_in_basket": "Wartość gwarancji w koszyku",
+        "value_services_in_basket": "Wartość usług w koszyku",
+        "discount_codes_charged": "Naliczone kody rabatowe",
+        "discount_charged": "Naliczone przeceny"
+    },
+    "pay": {
+        "title": "Płatność",
+        "card": "Kartą",
+        "cash": "Gotówką",
+        "tital_value": "Całkowita wartość zamówienia"
+    },
+    "documents": {
+        "title": "Dokumenty",
+        "document": "Dokument",
+        "no_document": "Nr dokumentu",
+        "correct_invoice": "Faktura korygująca",
+        "date_created": "Data utworzenia"
+    }
 }

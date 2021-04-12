@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NotifierService } from 'src/app/common/services/notifier.service';
 
 @Component({
   selector: 'order-item',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(protected notifierService: NotifierService) { }
 
   ngOnInit(): void {
+  }
+
+  showNotifier() {
+    this.notifierService.success("some alert", 'title', true);
   }
 
 }

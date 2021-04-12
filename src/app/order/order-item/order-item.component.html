@@ -4,32 +4,32 @@
             <div class="col-1">
                 <div class="d-flex flex-column">
                     <label>13.10.2019</label>
-                    <label class="text-secondary fs-placeholder">Data wystawienia</label>
+                    <label class="text-secondary fs-placeholder">{{ "order.date_issue" | translate}}</label>
                 </div>
             </div>
 
             <div class="col-1">
                 <div class="d-flex flex-column">
                     <label>C4</label>
-                    <label class="text-secondary fs-placeholder">Sprzedano w</label>
+                    <label class="text-secondary fs-placeholder">{{ "order.sold_in" | translate}}</label>
                 </div>
             </div>
             <div class="col-1">
                 <div class="d-flex flex-column">
                     <label>13.10.2019</label>
-                    <label class="text-secondary fs-placeholder">Fiskalizacja</label>
+                    <label class="text-secondary fs-placeholder">{{ "order.fiscalization" | translate}}</label>
                 </div>
             </div>
             <div class="col-2">
                 <div class="d-flex flex-column">
                     <label>2137WA</label>
-                    <label class="text-secondary fs-placeholder">Pracownik wystawiający</label>
+                    <label class="text-secondary fs-placeholder">{{ "order.issuing_worker" | translate}}</label>
                 </div>
             </div>
             <div class="col-5">
                 <div class="d-flex flex-column">
                     <label>Franz Smuda | 690 555 444 | franz.smuda@buziaczek.pl</label>
-                    <label class="text-secondary fs-placeholder">Nabywca</label>
+                    <label class="text-secondary fs-placeholder">{{ "order.buyer" | translate}}</label>
                 </div>
             </div>
             <div class="col-1">
@@ -42,17 +42,17 @@
 
         <div class="row align-items-center">
             <div class="col-3">
-                <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" data-bs-toggle="offcanvas" data-bs-target="#createInvoiceProducts" aria-controls="offcanvasBottom" type="button">Wystaw fakturę</button>
+                <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" data-bs-toggle="offcanvas" data-bs-target="#createInvoiceProducts" aria-controls="offcanvasBottom" type="button">{{ "order.issue_an_invoice" | translate}}</button>
             </div>
 
             <div class="col-3">
-                <button class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" type="button">Rozlicz należność</button>
+                <button class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" (click)="showNotifier()" type="button">{{ "order.settlement_of_accounts" | translate}}</button>
             </div>
             <div class="col-3">
-                <button class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" type="button">Dodaj gwarancję</button>
+                <button class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" type="button">{{ "order.add_guarantee" | translate}}</button>
             </div>
             <div class="col-3">
-                <button class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" data-bs-toggle="offcanvas" data-bs-target="#documentsOffCanvas" aria-controls="documentsOffCanvas" type="button">Zobacz dokumenty</button>
+                <button class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" data-bs-toggle="offcanvas" data-bs-target="#documentsOffCanvas" aria-controls="documentsOffCanvas" type="button">{{ "order.see_documents" | translate}}</button>
             </div>
 
         </div>

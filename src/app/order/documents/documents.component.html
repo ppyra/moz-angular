@@ -1,7 +1,7 @@
 <div class="offcanvas offcanvas-bottom rounded-3 m-1" tabindex="-1" id="documentsOffCanvas" #documentsBar>
     <div class="m-3">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Dokumenty <span class="text-secondary">Zlecenie nr:2020 123 456 789</span></h5>
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">{{ "documents.title" | translate}} <span class="text-secondary">{{ "order.order_nr" | translate }}:2020 123 456 789</span></h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -11,26 +11,26 @@
                 </div>
                 <div class="col-5">
                     <div class="d-flex flex-column">
-                        <label class="fw-bolder">Faktura korygująca nr FKV/C4/00001</label>
-                        <label class="fs-placeholder text-secondary">Dokument</label>
+                        <label class="fw-bolder">{{ "documents.correct_invoice" | translate}} {{ "no" | translate}} FKV/C4/00001</label>
+                        <label class="fs-placeholder text-secondary">{{ "documents.document" | translate}}</label>
                     </div>
                 </div>
 
                 <div class="col-2">
                     <div class="d-flex flex-column">
                         <label>13.10.2019</label>
-                        <label class="text-secondary fs-placeholder" id="name">Data utworzenia</label>
+                        <label class="text-secondary fs-placeholder">{{ "documents.date_created" | translate}}</label>
                     </div>
                 </div>
 
                 <div class="col-2">
                     <div class="d-flex flex-column">
                         <label>123456</label>
-                        <label class="text-secondary fs-placeholder" id="name">Nr dokumentu</label>
+                        <label class="text-secondary fs-placeholder">{{ "documents.no_document" | translate}}</label>
                     </div>
                 </div>
                 <div class="col-2">
-                    <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="offcanvas" (click)="openInvoice($event)">Szczegóły</button>
+                    <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="offcanvas" (click)="openInvoice($event)">{{ "product.details" | translate}}</button>
                 </div>
             </div>
 
@@ -40,30 +40,29 @@
                 </div>
                 <div class="col-5">
                     <div class="d-flex flex-column">
-                        <label class="fw-bolder">Faktura korygująca nr FKV/C4/00001</label>
-                        <label class="text-secondary fs-placeholder">Dokument</label>
+                        <label class="fw-bolder">{{ "documents.correct_invoice" | translate}} {{ "no" | translate}} FKV/C4/00001</label>
+                        <label class="text-secondary fs-placeholder">{{ "documents.document" | translate}}</label>
                     </div>
                 </div>
 
                 <div class="col-2">
                     <div class="d-flex flex-column">
                         <label>13.10.2019</label>
-                        <label class="text-secondary fs-placeholder" id="name">Data utworzenia</label>
+                        <label class="text-secondary fs-placeholder">{{ "documents.date_created" | translate}}</label>
                     </div>
                 </div>
 
                 <div class="col-2">
                     <div class="d-flex flex-column">
                         <label>123456</label>
-                        <label class="text-secondary fs-placeholder" id="name">Nr dokumentu</label>
+                        <label class="text-secondary fs-placeholder">{{ "documents.no_document" | translate}}</label>
                     </div>
                 </div>
                 <div class="col-2">
-                    <!-- <button type="button" class="btn btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#invoiceOffCanvas" aria-controls="invoiceOffCanvas">Szczegółyyy</button> -->
-                    <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="offcanvas" (click)="openInvoice($event)">Szczegóły</button>
+                    <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="offcanvas" (click)="openInvoice($event)">{{ "product.details" | translate}}</button>
                 </div>
             </div>
-            <template #dynamicComponentContainer></template>
+            <!-- <template #dynamicComponentContainer></template> -->
         </div>
     </div>
 </div>

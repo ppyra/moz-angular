@@ -32,20 +32,20 @@
                                 <div class="col-1">
                                     <div class="d-flex flex-column">
                                         <label>1</label>
-                                        <label class="fs-placeholder text-secondary">Liczba</label>
+                                        <label class="fs-placeholder text-secondary">{{ "product.count" | translate }}</label>
                                     </div>
                                 </div>
                                 <div class="col-1" style="width: 9.5%;">
                                     <div class="d-flex flex-column">
                                         <label>2 999,00 zł</label>
-                                        <label class="fs-placeholder text-secondary">Cena</label>
+                                        <label class="fs-placeholder text-secondary">{{ "product.price" | translate }}</label>
 
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="d-flex flex-column">
                                         <label>do opłacenia</label>
-                                        <label class="fs-placeholder text-secondary">Status</label>
+                                        <label class="fs-placeholder text-secondary">{{ "product.status" | translate }}</label>
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                             <div class="row align-items-center m-2">
                                 <div class="col-7" style="width: 63.3%;">
                                     <div class="d-flex flex-column">
-                                        <label class="text-secondary fs-list-item">Cena katalogowa</label>
+                                        <label class="text-secondary fs-list-item">{{ "product.catalog_price" | translate}}</label>
                                         <label class="text-secondary fs-list-item" id="name">Minus 1 000 zł na zakup trzech telewizorów marki Philips</label>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                         <div class="col-6">
                             <div class="flex-column">
                                 <div class="row gx-4 align-items-center">
-                                    <div class="col-1 d-flex justify-content-center">+</div>
+                                    <div class="col-1 d-flex justify-content-center"><span><i class="bi bi-plus fa-4x"></i></span></div>
                                     <div class="col-5" style="width: auto;">
                                         <label class="fw-bolder fs-list-item">Przedłuż Gwarancję® wariant PODSTAWOWY - 5 lat</label>
                                     </div>
@@ -85,22 +85,22 @@
                         </div>
 
                         <div class="col-2">
-                            <button type="button" class="btn btn-outline-secondary btn-light btn-sm rounded-pill">GWARANCJA</button>
+                            <button type="button" class="btn btn-outline-secondary btn-light btn-sm rounded-pill">{{ "product.guarantee" | translate }}</button>
                         </div>
                         <div class="col-1">
                             <div class="d-flex flex-column">
                                 <label>380,00</label>
-                                <label class="fs-placeholder text-secondary">Cena</label>
+                                <label class="fs-placeholder text-secondary">{{ "product.price" | translate}}</label>
                             </div>
                         </div>
                         <div class="col-1">
                             <div class="d-flex flex-column">
                                 <label>do opłacenia</label>
-                                <label class="fs-placeholder text-secondary">Status</label>
+                                <label class="fs-placeholder text-secondary">{{ "product.status" | translate}}</label>
                             </div>
                         </div>
                         <div class="col-1">
-                            <button type="button" class="btn btn-outline-primary">Anuluj</button>
+                            <button type="button" class="btn btn-outline-primary">{{ "ignore" | translate}}</button>
                         </div>
                     </div>
 
@@ -117,18 +117,18 @@
                         </div>
 
                         <div class="col-2">
-                            <button type="button" class="btn btn-outline-secondary btn-light btn-sm rounded-pill">USŁUGA</button>
+                            <button type="button" class="btn btn-outline-secondary btn-light btn-sm rounded-pill">{{ "product.service" | translate}}</button>
                         </div>
                         <div class="col-1">
                             <div class="d-flex flex-column">
                                 <label>79,00 zł</label>
-                                <label class="fs-placeholder text-secondary">Cena</label>
+                                <label class="fs-placeholder text-secondary">{{ "product.price" | translate}}</label>
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="d-flex flex-column">
                                 <label>w trakcie</label>
-                                <label class="fs-placeholder text-secondary">Status</label>
+                                <label class="fs-placeholder text-secondary">{{ "product.status" | translate}}</label>
                             </div>
                         </div>
 
@@ -160,20 +160,20 @@
                                 <div class="col-1">
                                     <div class="d-flex flex-column">
                                         <label>1</label>
-                                        <label class="fs-placeholder text-secondary">Liczba</label>
+                                        <label class="fs-placeholder text-secondary">{{ "product.count" | translate}}</label>
                                     </div>
                                 </div>
                                 <div class="col-1" style="width: 9.5%;">
                                     <div class="d-flex flex-column">
                                         <label>2 999,00 zł</label>
-                                        <label class="fs-placeholder text-secondary">Cena</label>
+                                        <label class="fs-placeholder text-secondary">{{ "product.price" | translate}}</label>
 
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="d-flex flex-column">
                                         <label>do opłacenia</label>
-                                        <label class="fs-placeholder text-secondary">Status</label>
+                                        <label class="fs-placeholder text-secondary">{{ "product.status" | translate}}</label>
                                     </div>
                                 </div>
                             </div>
@@ -182,7 +182,7 @@
                             <div class="row align-items-center m-2">
                                 <div class="col-7" style="width: 63.3%;">
                                     <div class="d-flex flex-column">
-                                        <label class="text-secondary fs-list-item">Cena katalogowa</label>
+                                        <label class="text-secondary fs-list-item">{{ "product.catalog_price" | translate}}</label>
                                         <label class="text-secondary fs-list-item" id="name">Minus 1 000 zł na zakup trzech telewizorów marki Philips</label>
                                     </div>
                                 </div>
@@ -203,18 +203,18 @@
             <hr class="w-100">
             <div class="row">
                 <div class="col-7">
-                    <h3 class="fs-4 fw-bold">Razem</h3>
+                    <h3 class="fs-4 fw-bold">{{ "product.sum" | translate}}</h3>
                 </div>
                 <div class="col-1">
                     <div class="d-flex flex-column">
                         <label class="ms-3">1</label>
-                        <label class="ms-3 fs-placeholder text-secondary">Liczba</label>
+                        <label class="ms-3 fs-placeholder text-secondary">{{ "product.count" | translate}}</label>
                     </div>
                 </div>
                 <div class="col-1">
                     <div class="d-flex flex-column">
                         <label>1</label>
-                        <label class="fs-placeholder text-secondary">Razem</label>
+                        <label class="fs-placeholder text-secondary">{{ "product.sum" | translate}}</label>
                     </div>
                 </div>
             </div>
