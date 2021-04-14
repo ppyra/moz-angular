@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import * as bootstrap from 'bootstrap';
+import { CanvasComponentsService } from 'src/app/common/components/offcanvas-bootom/canvas-components.service';
+import { ComponentModel, Height } from 'src/app/common/components/offcanvas-bootom/component.model';
 
 @Component({
   selector: 'order-documents',
@@ -8,19 +10,20 @@ import * as bootstrap from 'bootstrap';
 })
 export class DocumentsComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private canvasComponentsService: CanvasComponentsService) { }
 
   ngOnInit(): void {
-    var documentsOffCanvas = document.getElementById('documentsOffCanvas')
-    var invoiceOffCanvas = document.getElementById('invoiceOffCanvas')
-    documentsOffCanvas.addEventListener('hidden.bs.offcanvas', function (e) {
-        var invoiceOffCanvasOffCanvas = new bootstrap.Offcanvas(invoiceOffCanvas)
-        invoiceOffCanvasOffCanvas.show()
-    })
+    // var documentsOffCanvas = document.getElementById('documentsOffCanvas')
+    // var invoiceOffCanvas = document.getElementById('invoiceOffCanvas')
+    // documentsOffCanvas.addEventListener('hidden.bs.offcanvas', function (e) {
+    //     var invoiceOffCanvasOffCanvas = new bootstrap.Offcanvas(invoiceOffCanvas)
+    //     invoiceOffCanvasOffCanvas.show()
+    // })
   }
 
-  openInvoice(e) {
-
+  openInvoice() {
+    this.canvasComponentsService.loadComponent(new ComponentModel('details', true, Height.h25));
   }
 
 }

@@ -1,5 +1,4 @@
 export class Notification {
-  id: string;
   type: NotificationType;
   title: string;
   message: string;

@@ -1,68 +1,67 @@
-<div class="offcanvas offcanvas-bottom rounded-3 m-1" tabindex="-1" id="documentsOffCanvas" #documentsBar>
-    <div class="m-3">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasBottomLabel">{{ "documents.title" | translate}} <span class="text-secondary">{{ "order.order_nr" | translate }}:2020 123 456 789</span></h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<!-- <div class="offcanvas offcanvas-bottom rounded-3 m-1" tabindex="-1" id="documentsOffCanvas" #documentsBar> -->
+<div class="m-3">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">{{ "documents.title" | translate}} <span class="text-secondary">{{ "order.order_nr" | translate }}:2020 123 456 789</span></h5>
+        <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+    </div>
+    <div class="offcanvas-body">
+        <div class="row border border-light rounded align-items-center">
+            <div class="col-1">
+                <i class="bi bi-receipt ms-2" style="font-size: 3rem; color: cornflowerblue;"></i>
+            </div>
+            <div class="col-5">
+                <div class="d-flex flex-column">
+                    <label class="fw-bolder">{{ "documents.correct_invoice" | translate}} {{ "no" | translate}} FKV/C4/00001</label>
+                    <label class="fs-placeholder text-secondary">{{ "documents.document" | translate}}</label>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="d-flex flex-column">
+                    <label>13.10.2019</label>
+                    <label class="text-secondary fs-placeholder">{{ "documents.date_created" | translate}}</label>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="d-flex flex-column">
+                    <label>123456</label>
+                    <label class="text-secondary fs-placeholder">{{ "documents.no_document" | translate}}</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-outline-secondary" type="button" (click)="openInvoice()">{{ "product.details" | translate}}</button>
+            </div>
         </div>
-        <div class="offcanvas-body">
-            <div class="row border border-light rounded align-items-center">
-                <div class="col-1">
-                    <img src="./images/tv.jpg" alt="..." class="img-thumbnail" style="width: 100px;">
-                </div>
-                <div class="col-5">
-                    <div class="d-flex flex-column">
-                        <label class="fw-bolder">{{ "documents.correct_invoice" | translate}} {{ "no" | translate}} FKV/C4/00001</label>
-                        <label class="fs-placeholder text-secondary">{{ "documents.document" | translate}}</label>
-                    </div>
-                </div>
 
-                <div class="col-2">
-                    <div class="d-flex flex-column">
-                        <label>13.10.2019</label>
-                        <label class="text-secondary fs-placeholder">{{ "documents.date_created" | translate}}</label>
-                    </div>
-                </div>
-
-                <div class="col-2">
-                    <div class="d-flex flex-column">
-                        <label>123456</label>
-                        <label class="text-secondary fs-placeholder">{{ "documents.no_document" | translate}}</label>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="offcanvas" (click)="openInvoice($event)">{{ "product.details" | translate}}</button>
+        <div class="row border border-light rounded align-items-center mt-2">
+            <div class="col-1">
+                <i class="bi bi-receipt ms-2" style="font-size: 3rem; color: cornflowerblue;"></i>
+            </div>
+            <div class="col-5">
+                <div class="d-flex flex-column">
+                    <label class="fw-bolder">{{ "documents.correct_invoice" | translate}} {{ "no" | translate}} FKV/C4/00001</label>
+                    <label class="text-secondary fs-placeholder">{{ "documents.document" | translate}}</label>
                 </div>
             </div>
 
-            <div class="row border border-light rounded align-items-center mt-2">
-                <div class="col-1">
-                    <img src="./images/tv.jpg" alt="..." class="img-thumbnail" style="width: 100px;">
-                </div>
-                <div class="col-5">
-                    <div class="d-flex flex-column">
-                        <label class="fw-bolder">{{ "documents.correct_invoice" | translate}} {{ "no" | translate}} FKV/C4/00001</label>
-                        <label class="text-secondary fs-placeholder">{{ "documents.document" | translate}}</label>
-                    </div>
-                </div>
-
-                <div class="col-2">
-                    <div class="d-flex flex-column">
-                        <label>13.10.2019</label>
-                        <label class="text-secondary fs-placeholder">{{ "documents.date_created" | translate}}</label>
-                    </div>
-                </div>
-
-                <div class="col-2">
-                    <div class="d-flex flex-column">
-                        <label>123456</label>
-                        <label class="text-secondary fs-placeholder">{{ "documents.no_document" | translate}}</label>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="offcanvas" (click)="openInvoice($event)">{{ "product.details" | translate}}</button>
+            <div class="col-2">
+                <div class="d-flex flex-column">
+                    <label>13.10.2019</label>
+                    <label class="text-secondary fs-placeholder">{{ "documents.date_created" | translate}}</label>
                 </div>
             </div>
-            <!-- <template #dynamicComponentContainer></template> -->
+
+            <div class="col-2">
+                <div class="d-flex flex-column">
+                    <label>123456</label>
+                    <label class="text-secondary fs-placeholder">{{ "documents.no_document" | translate}}</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-outline-secondary" type="button" (click)="openInvoice()">{{ "product.details" | translate}}</button>
+            </div>
         </div>
     </div>
 </div>
+<!-- </div> -->

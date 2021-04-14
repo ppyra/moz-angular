@@ -49,10 +49,10 @@
                 <button class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" (click)="showNotifier()" type="button">{{ "order.settlement_of_accounts" | translate}}</button>
             </div>
             <div class="col-3">
-                <button class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" type="button">{{ "order.add_guarantee" | translate}}</button>
+                <button class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" type="button" (click)="addGuarantee()">{{ "order.add_guarantee" | translate}}</button>
             </div>
             <div class="col-3">
-                <button class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" data-bs-toggle="offcanvas" data-bs-target="#documentsOffCanvas" aria-controls="documentsOffCanvas" type="button">{{ "order.see_documents" | translate}}</button>
+                <button class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" type="button" (click)="showDocuments()">{{ "order.see_documents" | translate}}</button>
             </div>
 
         </div>

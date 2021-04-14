@@ -26,7 +26,8 @@
         "price": "Cena",
         "catalog_price": "Cena kartalogowa",
         "guarantee": "Gwarancja",
-        "service": "Usługa"
+        "service": "Usługa",
+        "discount": "Rabat"
     },
     "summary": {
         "title": "Podsumowanie",
@@ -48,5 +49,46 @@
         "no_document": "Nr dokumentu",
         "correct_invoice": "Faktura korygująca",
         "date_created": "Data utworzenia"
+    },
+    "invoice": {
+        "title": "Faktura VAT",
+        "first_second_name": "Imię i nazwisko",
+        "address": "Adres",
+        "nip": "NIP",
+        "time_approval": "Godzina zatwierdzenia",
+        "approval_by": "Zatwierdzono przez",
+        "data_correction": "Korekta danych",
+        "reset_correction": "Korekta zerująca",
+        "print": "Drukuj",
+        "product_name": "Nazwa produktu",
+        "commodity_group": "Grupa towarowa",
+        "plu": "PLU",
+        "unit_price": "Cena jedn.",
+        "confirmed": "Potwierdzone",
+        "corrective": "Korygująca",
+        "issue_of_an_invoice": "Wystawianie faktury",
+        "select_all": "Zaznacz wszystkie",
+        "confirm": "Potwierdzam",
+        "issue_of_corrective": "Faktura korygująca",
+        "selected_elements": "wybrane elementy",
+        "new_invoice_details": "nowe dane do faktury",
+        "change": "Zmień",
+        "exhibit": "Wystaw",
+        "search_customer": "Wyszukaj klienta",
+        "save": "Zapisz"
+    },
+    "notification": {
+        "login_with_valid_credentials": "Zaloguj się używając ważnych danych logowania",
+        "password_expired_info": "Twoje hasło wygasło",
+        "access_denied": "Odmowa dostępu",
+        "404_not_found": "404 - Nie znaleziono",
+        "login_session_expired": "Zostałeś wylogowany z powodu wygaśnięcia sesji",
+        "unauthorized": "Brak autoryzacji",
+        "502_not_responding": "502 - Serwer nie odpowiada",
+        "blocked_account": "Zablokowane konto",
+        "blocked_account_info": "Twoje konto zostało zablokowane. W celu odblokowania skontaktuj się z administratorem.",
+        "server_down": "Nie można nawiązać połączenia z serwerem MOZ",
+        "server_down_message": "Nie można uzyskać połączenia z serwerem MOZ bądź serwer nie działa. Skontaktuj się z administratorem",
+        "request_timeout": "Upłynął czas oczekiwania na odpowiedź"
     }
 }

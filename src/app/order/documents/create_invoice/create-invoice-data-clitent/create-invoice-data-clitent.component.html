@@ -1,8 +1,8 @@
 <div class="offcanvas offcanvas-bottom rounded-3 m-1" style="height: fit-content;" tabindex="-1" id="dataClientInvoice">
     <div class="m-3">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Wystawienie faktury <span class="text-secondary">wybrane elementy: 5</span>
-                <button class="btn btn-outline-primary rounded-pill text-uppercase fw-bold ms-4" type="button">+ nowe dane do faktury</button>
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">{{ "invoice.issue_of_an_invoice" | translate}} <span class="text-secondary">{{ "invoice.selected_elements" | translate}}: 5</span>
+                <button class="btn btn-outline-primary rounded-pill text-uppercase fw-bold ms-4" type="button">+ {{ "invoice.new_invoice_details" | translate}}</button>
             </h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -16,14 +16,15 @@
                 <div id="multi-item-example" class="carousel slide" data-interval="false" data-ride="carousel">
 
                     <!--/.Controls-->
-                    <a class="carousel-control-prev w-auto" href="#multi-item-example" role="button">
-                        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next w-auto" href="#multi-item-example" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+
+                    <button class="carousel-control-prev w-auto" type="button" data-bs-target="#multi-item-example" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next w-auto" type="button" data-bs-target="#multi-item-example" data-bs-slide="next">
+                      <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
 
                     <!--Slides-->
                     <div class="carousel-inner w-75 mx-auto" role="listbox">
@@ -40,7 +41,7 @@
                                           <div class="w-100 mt-4">
                                               <div class="d-flex justify-content-between">
                                                   <h3 class="fs-4 fw-bolder">Katarzyna Lek</h3>
-                                                  <a href="#">Zmień</a>
+                                                  <a href="#">{{ "invoice.change" | translate}}</a>
                                               </div>
                                               <div class="d-flex flex-column">
                                                   <h4 class="fs-6">Muszkieterów 15,</h4>
@@ -61,7 +62,7 @@
                                               <div class="w-100 mt-4">
                                                   <div class="d-flex justify-content-between">
                                                       <h3 class="fs-4 fw-bolder">Magdalena Nyc</h3>
-                                                      <a href="#">Zmień</a>
+                                                      <a href="#">{{ "invoice.change" | translate}}</a>
                                                   </div>
                                                   <div class="d-flex flex-column">
                                                       <h4 class="fs-6">Muszkieterów 15,</h4>
@@ -83,7 +84,7 @@
                                               <div class="w-100 mt-4">
                                                   <div class="d-flex justify-content-between">
                                                       <h3 class="fs-4 fw-bolder">Sebastian Lech</h3>
-                                                      <a href="#">Zmień</a>
+                                                      <a href="#">{{ "invoice.change" | translate}}</a>
                                                   </div>
                                                   <div class="d-flex flex-column">
                                                       <h4 class="fs-6">Muszkieterów 15,</h4>
@@ -105,7 +106,7 @@
                                               <div class="w-100 mt-4">
                                                   <div class="d-flex justify-content-between">
                                                       <h3 class="fs-4 fw-bolder">Sebastian Lech</h3>
-                                                      <a href="#">Zmień</a>
+                                                      <a href="#">{{ "invoice.change" | translate}}</a>
                                                   </div>
                                                   <div class="d-flex flex-column">
                                                       <h4 class="fs-6">Muszkieterów 15,</h4>
@@ -135,7 +136,7 @@
                                               <div class="w-100 mt-4">
                                                   <div class="d-flex justify-content-between">
                                                       <h3 class="fs-4 fw-bolder">Kazimierz Kuz</h3>
-                                                      <a href="#">Zmień</a>
+                                                      <a href="#">{{ "invoice.change" | translate}}</a>
                                                   </div>
                                                   <div class="d-flex flex-column">
                                                       <h4 class="fs-6">Muszkieterów 15,</h4>
@@ -157,7 +158,7 @@
                                               <div class="w-100 mt-4">
                                                   <div class="d-flex justify-content-between">
                                                       <h3 class="fs-4 fw-bolder">Jan Sudoł</h3>
-                                                      <a href="#">Zmień</a>
+                                                      <a href="#">{{ "invoice.change" | translate}}</a>
                                                   </div>
                                                   <div class="d-flex flex-column">
                                                       <h4 class="fs-6">Muszkieterów 15,</h4>
@@ -179,7 +180,7 @@
                                               <div class="w-100 mt-4">
                                                   <div class="d-flex justify-content-between">
                                                       <h3 class="fs-4 fw-bolder">Jacek Zielony</h3>
-                                                      <a href="#">Zmień</a>
+                                                      <a href="#">{{ "invoice.change" | translate}}</a>
                                                   </div>
                                                   <div class="d-flex flex-column">
                                                       <h4 class="fs-6">Muszkieterów 15,</h4>
@@ -209,7 +210,7 @@
                                               <div class="w-100 mt-4">
                                                   <div class="d-flex justify-content-between">
                                                       <h3 class="fs-4 fw-bolder">Dorota Rak</h3>
-                                                      <a href="#">Zmień</a>
+                                                      <a href="#">{{ "invoice.change" | translate}}</a>
                                                   </div>
                                                   <div class="d-flex flex-column">
                                                       <h4 class="fs-6">Muszkieterów 15,</h4>
@@ -231,7 +232,7 @@
                                               <div class="w-100 mt-4">
                                                   <div class="d-flex justify-content-between">
                                                       <h3 class="fs-4 fw-bolder">Maciej Żak</h3>
-                                                      <a href="#">Zmień</a>
+                                                      <a href="#">{{ "invoice.change" | translate}}</a>
                                                   </div>
                                                   <div class="d-flex flex-column">
                                                       <h4 class="fs-6">Muszkieterów 15,</h4>
@@ -253,7 +254,7 @@
                                               <div class="w-100 mt-4">
                                                   <div class="d-flex justify-content-between">
                                                       <h3 class="fs-4 fw-bolder">Adam Kowalski</h3>
-                                                      <a href="#">Zmień</a>
+                                                      <a href="#">{{ "invoice.change" | translate}}</a>
                                                   </div>
                                                   <div class="d-flex flex-column">
                                                       <h4 class="fs-6">Muszkieterów 15,</h4>
@@ -281,41 +282,41 @@
                     <div class="row">
                         <div class="col-4">
                             <div class="mb-3">
-                                <input type="text" class="d-inline form-control" id="recipient-name" placeholder="Imię" required>
+                                <input type="text" class="d-inline form-control" id="name" placeholder="Imię" required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="recipient-name" placeholder="Nazwisko" required>
+                                <input type="text" class="form-control" id="second_name" placeholder="Nazwisko" required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="recipient-name" placeholder="Kod pocztowy" required>
+                                <input type="text" class="form-control" id="post_code" placeholder="Kod pocztowy" required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="recipient-name" placeholder="Miejscowość" required>
+                                <input type="text" class="form-control" id="city" placeholder="Miejscowość" required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="recipient-name" placeholder="Ulica" required>
+                                <input type="text" class="form-control" id="street" placeholder="Ulica" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="row gx-5">
                                     <div class="col-6">
-                                        <input type="text" class="form-control" id="recipient-name" placeholder="Numer domu" required>
+                                        <input type="text" class="form-control" id="home_no" placeholder="Numer domu" required>
                                     </div>
                                     <div class="col-6">
-                                        <input type="text" class="form-control" id="recipient-name" placeholder="Numer mieszkania">
+                                        <input type="text" class="form-control" id="flat_no" placeholder="Numer mieszkania">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
-                            <button class="btn btn-outline-primary rounded-pill text-uppercase  w-25 mx-auto" type="submit">Wyszukaj klienta</button>
+                            <button class="btn btn-outline-primary rounded-pill text-uppercase  w-25 mx-auto" type="submit">{{ "invoice.search_customer" | translate}}</button>
                         </div>
                     </div>
                 </form>
 
                 <hr class="w-100">
                 <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-primary rounded-pill text-uppercase w-25" type="button">Wystaw</button>
-                    <button class="btn btn-outline-light bg-secondary rounded-pill text-uppercase w-25" type="button">Anuluj</button>
+                    <button class="btn btn-primary rounded-pill text-uppercase w-25" type="button">{{ "invoice.exhibit" | translate}}</button>
+                    <button class="btn btn-outline-light bg-secondary rounded-pill text-uppercase w-25" type="button">{{ "ignore" | translate}}</button>
                 </div>
             </div>
         </div>

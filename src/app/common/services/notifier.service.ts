@@ -30,7 +30,7 @@ export class NotifierService {
         this.alert(new Notification(NotificationType.INFO, message, title, autoClose, fade, keepAfterRouteChange));
     }
 
-    warn(message?: string, title?: string, autoClose?: boolean, fade?: boolean, keepAfterRouteChange?: boolean) {
+    warning(message?: string, title?: string, autoClose?: boolean, fade?: boolean, keepAfterRouteChange?: boolean) {
         this.alert(new Notification(NotificationType.WARN, message, title, autoClose, fade, keepAfterRouteChange));
     }
 

@@ -2,38 +2,38 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Korekta danych</h5>
+                <h5 class="modal-title" id="exampleModalLabel">{{ "invoice.data_correction" | translate}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form>
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="recipient-name" placeholder="Imię" required>
+                        <input type="text" class="form-control" id="name" placeholder="Imię" required>
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="recipient-name" placeholder="Nazwisko" required>
+                        <input type="text" class="form-control" id="second_name" placeholder="Nazwisko" required>
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="recipient-name" placeholder="Kod pocztowy" required>
+                        <input type="text" class="form-control" id="post_code" placeholder="Kod pocztowy" required>
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="recipient-name" placeholder="Miejscowość" required>
+                        <input type="text" class="form-control" id="city" placeholder="Miejscowość" required>
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="recipient-name" placeholder="Ulica" required>
+                        <input type="text" class="form-control" id="street" placeholder="Ulica" required>
                     </div>
                     <div class="input-group mb-3">
                         <div class="row gx-5">
                             <div class="col-6">
-                                <input type="text" class="form-control" id="recipient-name" placeholder="Numer domu" required>
+                                <input type="text" class="form-control" id="home_no" placeholder="Numer domu" required>
                             </div>
                             <div class="col-6">
-                                <input type="text" class="form-control" id="recipient-name" placeholder="Numer mieszkania">
+                                <input type="text" class="form-control" id="flat-no" placeholder="Numer mieszkania">
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-100" type="submit">Zapisz</button>
-                    <button type="button" class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100" data-bs-dismiss="modal">Anuluj</button>
+                    <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-100" type="submit">{{ "invoice.save" | translate}}</button>
+                    <button type="button" class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100" data-bs-dismiss="modal">{{ "ignore" | translate}}</button>
                 </form>
             </div>
         </div>

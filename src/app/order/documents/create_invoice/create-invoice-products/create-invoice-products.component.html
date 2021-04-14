@@ -1,7 +1,7 @@
 <div class="offcanvas offcanvas-bottom rounded-3 m-1 h-75" tabindex="-1" id="createInvoiceProducts">
     <div class="m-3">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Wystawienie faktury</h5>
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">{{ " invoice.issue_of_an_invoice" | translate}}</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -14,7 +14,7 @@
                 <ul class="list-group ">
                     <li class="list-group-item border-0">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        <label class="fw-bolder ms-4" for="flexCheckChecked">Zaznacz wszystkie</label>
+                        <label class="fw-bolder ms-4" for="flexCheckChecked">{{ "invoice.select_all" | translate}}</label>
                     </li>
                     <li class="list-group-item border-0 border-bottom">
                         <div class="row align-items-center">
@@ -26,9 +26,9 @@
                             </div>
                             <div class="col-6">
                                 <div class="d-flex flex-column">
-                                    <label class="fw-bolder">Faktura korygująca nr FKV/C4/00001</label>
+                                    <label class="fw-bolder">{{ "invoice.issue_of_corrective" | translate}} {{ "no" | translate}} FKV/C4/00001</label>
                                     <div class="flex-row">
-                                        <label class="fs-placeholder text-secondary">Dokument</label>
+                                        <label class="fs-placeholder text-secondary">{{ "documents.document" | translate}}</label>
                                         <label class="fs-placeholder text-secondary ms-4">119404586</label>
                                     </div>
 
@@ -46,13 +46,13 @@
                             <div class="col-2">
                                 <div class="d-flex flex-column">
                                     <label>3 458,00 zł</label>
-                                    <label class="text-secondary fs-placeholder" id="name">Razem</label>
+                                    <label class="text-secondary fs-placeholder" id="name">{{ "product.sum" | translate}}</label>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="d-flex flex-column">
                                     <label>w trakcie</label>
-                                    <label class="text-secondary fs-placeholder" id="name">Status</label>
+                                    <label class="text-secondary fs-placeholder" id="name">{{ "product.status" | translate}}</label>
                                 </div>
                             </div>
                         </div>
@@ -67,9 +67,9 @@
                             </div>
                             <div class="col-6">
                                 <div class="d-flex flex-column">
-                                    <label class="fw-bolder">Faktura korygująca nr FKV/C4/00001</label>
+                                    <label class="fw-bolder">{{ "invoice.issue_of_corrective" | translate}} {{ "no" | translate}} FKV/C4/00001</label>
                                     <div class="flex-row">
-                                        <label class="fs-placeholder text-secondary">Dokument</label>
+                                        <label class="fs-placeholder text-secondary">{{ "documents.document" | translate}}</label>
                                         <label class="fs-placeholder text-secondary ms-4">119404586</label>
                                     </div>
 
@@ -87,19 +87,19 @@
                             <div class="col-2">
                                 <div class="d-flex flex-column">
                                     <label>3 458,00 zł</label>
-                                    <label class="text-secondary fs-placeholder" id="name">Razem</label>
+                                    <label class="text-secondary fs-placeholder" id="name">{{ "product.sum" | translate}}</label>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="d-flex flex-column">
                                     <label>w trakcie</label>
-                                    <label class="text-secondary fs-placeholder" id="name">Status</label>
+                                    <label class="text-secondary fs-placeholder" id="name">{{ "product.status" | translate}}</label>
                                 </div>
                             </div>
                         </div>
                     </li>
                 </ul>
-                <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-25 mx-auto" type="submit">Potwierdzam</button>
+                <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-25 mx-auto" type="submit">{{ "invoice.confirm" | translate}}</button>
             </div>
         </div>
     </div>
