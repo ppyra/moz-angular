@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CanvasComponentsService } from 'src/app/common/components/offcanvas-bootom/canvas-components.service';
 import { NotifierService } from 'src/app/common/services/notifier.service';
-
+import * as bootstrap from 'bootstrap';
 @Component({
   selector: 'order-item',
   templateUrl: './order-item.component.html',
@@ -9,7 +10,7 @@ import { NotifierService } from 'src/app/common/services/notifier.service';
 })
 export class OrderItemComponent implements OnInit {
 
-  constructor(protected notifierService: NotifierService, private canvasComponentsService: CanvasComponentsService) { }
+  constructor(protected notifierService: NotifierService, private canvasComponentsService: CanvasComponentsService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +24,10 @@ export class OrderItemComponent implements OnInit {
   }
 
   showDocuments() {
-    this.canvasComponentsService.open();
+    //this.canvasComponentsService.open();
+    //var invoiceOffCanvas = document.getElementById('offcanvasWrapper');
+    //var invoiceOffCanvasOffCanvas = new bootstrap.Offcanvas(invoiceOffCanvas);
+    //invoiceOffCanvasOffCanvas.show();
+    this.router.navigate(['canvas'], { relativeTo: this.route })
   }
 }

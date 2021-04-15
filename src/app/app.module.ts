@@ -61,7 +61,7 @@ export function appInitializerFactory(translate: TranslateService) {
       multi: true
     }
   ],
-  exports: [ TranslateModule],
+  exports: [ TranslateModule, AppRoutingModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
