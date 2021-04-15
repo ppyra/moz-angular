@@ -13,11 +13,11 @@ import { OffcanvasBootomComponent } from './components/offcanvas-bootom/offcanva
 const commonRoutes: Routes = [
       {
         path: 'documents', 
-        component: DocumentsComponent,
+        component: DocumentsComponent
       },
       {
         path: 'invoice', 
-        component: InvoiceComponent, 
+        component: InvoiceComponent
       }
 ];
 export const CommonRoutesModule = RouterModule.forChild(commonRoutes);

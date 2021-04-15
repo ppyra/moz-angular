@@ -4,20 +4,22 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
-        <button name="withdraw" (click)="activeComponent = 'documents'">Withdraw</button>
-        <button name="enter" (click)="activeComponent = 'details'">Enter Amount to Withdraw</button>
-        <a routerLink="canvas/documents" routerLinkActive="active">Users</a>
-        <a routerLink="./profile" routerLinkActive="active">Profile</a>
-        <div [ngSwitch]="activeComponent">
+        <!-- <button name="withdraw" (click)="activeComponent = 'documents'">Withdraw</button>
+        <button name="enter" (click)="activeComponent = 'details'">Enter Amount to Withdraw</button> -->
+        <div class="d-flex justify-content-around w-25">
+            <a routerLink="canvas/documents" routerLinkActive="active">documents</a>
+            <a routerLink="invoice" routerLinkActive="active">invoice</a>
+        </div>
+        <!-- <div [ngSwitch]="activeComponent">
             <ng-template [ngSwitchCase]="'documents'">
                 <p>TypeScript Course</p>
-                <!-- <order-documents></order-documents> -->
+                <order-documents></order-documents>
             </ng-template>
             <ng-template [ngSwitchCase]="'details'">
                 <p>JavaScript Course</p>
-                <!-- <invoice></invoice> -->
+                <invoice></invoice>
             </ng-template>
-        </div>
+        </div> -->
         <router-outlet></router-outlet>
     </div>
 </div>

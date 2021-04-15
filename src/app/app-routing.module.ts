@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CommonRoutesModule } from './common/common.module';
 import { OffcanvasBootomComponent } from './common/components/offcanvas-bootom/offcanvas-bootom.component';
 import { InvoiceComponent } from './order/documents/create_invoice/invoice/invoice.component';
@@ -20,7 +20,6 @@ const routes: Routes = [
         path: 'canvas', 
         component: OffcanvasBootomComponent,
         // children: Module1_ROUTE
-        // loadChildren: './common/common.module#CommonRoutesModule'
          loadChildren: () => import('./common/common.module').then(m => m.SharedModule)
         // children: [
         //   { 
@@ -38,7 +37,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,  { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
