@@ -13,7 +13,7 @@ export class OffcanvasBootomComponent implements OnInit {
   modelComponent: ComponentModel;
   isOpen = false;
   activeComponent = 'documents';
-  constructor(private canvasComponentsService: CanvasComponentsService, private route: ActivatedRoute, private router: Router) { 
+  constructor(private canvasComponentsService: CanvasComponentsService, private route: ActivatedRoute, private router: Router) {
     //this.router.navigate(['documents'], { relativeTo: this.route })
   }
 
@@ -26,11 +26,14 @@ export class OffcanvasBootomComponent implements OnInit {
     //   }
     // })
    // var documentsOffCanvas = document.getElementById('documentsOffCanvas')
-   
-    
+
+
   }
-  openCanvas() { 
+  openCanvas() {
     this.router.navigate(['canvas'], { relativeTo: this.route })
+  }
+  gotodoc() {
+    this.router.navigate(['canvas/documents'], {relativeTo: this.route});
   }
 }
 
