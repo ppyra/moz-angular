@@ -2,29 +2,28 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { InvoiceComponent } from "../order/documents/create_invoice/invoice/invoice.component";
 import { DocumentsComponent } from "../order/documents/documents.component";
-import { OffcanvasBootomComponent } from "./components/offcanvas-bootom/offcanvas-bootom.component";
 
-const CanvasRoutes: Routes = [
+export const CanvasRoutes: Routes = [
   {
     path: 'canvas',
-    component: OffcanvasBootomComponent,
     children: [
-      {
-        //outlet: "chat",
-        path: 'documents',
-        component: DocumentsComponent
-      },
-      {
-        path: 'invoice',
-        component: InvoiceComponent
-      }
-    ]
-  },
-  {
-    path: '',
-    redirectTo: 'canvas/documents',
-    pathMatch: 'full'
-  }
+    {
+      path: 'documents',
+      outlet: "innerOutlet",
+      component: DocumentsComponent
+    },
+    {
+      path: 'invoice',
+      outlet: "innerOutlet",
+      component: InvoiceComponent
+    },
+    {
+      path: '',
+      redirectTo: 'documents',
+      pathMatch: 'full'
+    },
+  ]
+}
 ];
 
 @NgModule({

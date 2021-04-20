@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CanvasComponentsService } from './canvas-components.service';
 import { ComponentModel } from './component.model';
@@ -14,26 +14,31 @@ export class OffcanvasBootomComponent implements OnInit {
   isOpen = false;
   activeComponent = 'documents';
   constructor(private canvasComponentsService: CanvasComponentsService, private route: ActivatedRoute, private router: Router) {
-    //this.router.navigate(['documents'], { relativeTo: this.route })
+
   }
 
   ngOnInit(): void {
+    document.body.addEventListener('click', function(e){
+      e.stopPropagation()
+  })
+
     // this.canvasComponentsService.componentSubject.subscribe((model: ComponentModel) => {
-    //   this.modelComponent = model;
-    //   if (model.open) {
-    //     this.activeComponent = model.component;
-    //     this.isOpen = true;
-    //   }
+      // this.modelComponent = model;
+      // if (model.open) {
+      //   this.activeComponent = model.component;
+      //   this.isOpen = true;
+      // }
     // })
    // var documentsOffCanvas = document.getElementById('documentsOffCanvas')
 
 
   }
   openCanvas() {
-    this.router.navigate(['canvas'], { relativeTo: this.route })
+    //this.router.navigate(['canvas'], { relativeTo: this.route })
   }
   gotodoc() {
-    this.router.navigate(['canvas/documents'], {relativeTo: this.route});
+    //this.router.navigate(['canvas/documents'], {relativeTo: this.route});
+    this.router.navigate(['canvas', {outlets: {innerOutlet: ['invoice']}}], { relativeTo: this.route })
   }
 }
 

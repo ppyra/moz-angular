@@ -28,6 +28,7 @@ export class OrderItemComponent implements OnInit {
     //var invoiceOffCanvas = document.getElementById('offcanvasWrapper');
     //var invoiceOffCanvasOffCanvas = new bootstrap.Offcanvas(invoiceOffCanvas);
     //invoiceOffCanvasOffCanvas.show();
-    this.router.navigate(['canvas'], { relativeTo: this.route })
+    this.router.navigate(['canvas', {outlets: {innerOutlet: ['documents']}}]); //, { relativeTo: this.route.parent })
+    //this.router.navigate(['canvas'], { relativeTo: this.route })
   }
 }

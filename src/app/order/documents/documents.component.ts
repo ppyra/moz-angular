@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as bootstrap from 'bootstrap';
 import { CanvasComponentsService } from 'src/app/common/components/offcanvas-bootom/canvas-components.service';
 import { ComponentModel, Height } from 'src/app/common/components/offcanvas-bootom/component.model';
@@ -11,7 +12,7 @@ import { ComponentModel, Height } from 'src/app/common/components/offcanvas-boot
 export class DocumentsComponent implements OnInit {
 
 
-  constructor(private canvasComponentsService: CanvasComponentsService) { }
+  constructor(private canvasComponentsService: CanvasComponentsService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     // var documentsOffCanvas = document.getElementById('documentsOffCanvas')
@@ -23,7 +24,8 @@ export class DocumentsComponent implements OnInit {
   }
 
   openInvoice() {
-    this.canvasComponentsService.loadComponent(new ComponentModel('details', true, Height.h25));
+    this.router.navigate([{outlets: {innerOutlet: ['invoice']}}], { relativeTo: this.route.parent })
+    //this.canvasComponentsService.loadComponent(new ComponentModel('details', true, Height.h25));
   }
 
 }

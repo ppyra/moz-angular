@@ -31,10 +31,7 @@ export function appInitializerFactory(translate: TranslateService) {
   declarations: [
     AppComponent,
     SalesRegistrationComponent,
-    // ProductItemComponent,
-    // ProductDetailsComponent,
     OrderItemComponent,
-    //DocumentsComponent
   ],
   imports: [
     BrowserModule,
