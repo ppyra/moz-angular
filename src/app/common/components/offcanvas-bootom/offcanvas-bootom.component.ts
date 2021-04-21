@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CanvasComponentsService } from './canvas-components.service';
+//import { CanvasComponentsService } from './component.model.service';
 import { ComponentModel } from './component.model';
+import { ComponentModelService } from './component.model.service';
 
 @Component({
   selector: 'offcanvas-bootom',
@@ -13,24 +14,18 @@ export class OffcanvasBootomComponent implements OnInit {
   modelComponent: ComponentModel;
   isOpen = false;
   activeComponent = 'documents';
-  constructor(private canvasComponentsService: CanvasComponentsService, private route: ActivatedRoute, private router: Router) {
+  constructor(private route: ActivatedRoute, private router: Router, private componentModelService: ComponentModelService) {
 
   }
 
   ngOnInit(): void {
     document.body.addEventListener('click', function(e){
       e.stopPropagation()
-  })
+    })
 
-    // this.canvasComponentsService.componentSubject.subscribe((model: ComponentModel) => {
-      // this.modelComponent = model;
-      // if (model.open) {
-      //   this.activeComponent = model.component;
-      //   this.isOpen = true;
-      // }
-    // })
-   // var documentsOffCanvas = document.getElementById('documentsOffCanvas')
-
+    this.componentModelService.getComponentDesc().subscribe((model: ComponentModel) => {
+      this.modelComponent = model;
+    })
 
   }
   openCanvas() {

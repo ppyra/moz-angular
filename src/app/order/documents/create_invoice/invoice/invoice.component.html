@@ -1,202 +1,68 @@
-<!-- <div class="offcanvas offcanvas-bottom rounded-3 m-1 h-75" tabindex="-1" id="invoiceOffCanvas" #invoiceBar> -->
-<div class="m-3">
-    <div class="offcanvas-header fs-4 fw-bold align-items-center">
-        <div class="d-flex flex-row">
-            <h5 class="offcanvas-title mt-3 mb-3" id="offcanvasBottomLabel">{{ "invoice.title" | translate}} <span class="text-secondary">1194364</span></h5>
-
-            <button type="button" class="btn btn-outline-success btn-sm btn-sm-header fw-bolder border-2 rounded-pill text-uppercase m-3">{{ "invoice.confirmed" | translate}}</button>
-            <button type="button" class="btn btn-outline-primary btn-sm btn-sm-header fw-bolder border-2 rounded-pill text-uppercase m-3">{{ "invoice.corrective" | translate}}</button>
-        </div>
-        <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
-    </div>
-    <div class="offcanvas-body">
-
-        <div class="row align-items-center">
-            <div class="col-2">
-                <div class="d-flex flex-column">
-                    <label class="fw-bolder">Arek Milik</label>
-                    <label class="fs-placeholder text-secondary">{{ "invoice.first_second_name" | translate}}</label>
-                </div>
-            </div>
-
-            <div class="col-2">
-                <div class="d-flex flex-column">
-                    <label>Muszkieterów 15, 00-268 Warszawa</label>
-                    <label class="text-secondary fs-placeholder">{{ "invoice.address" | translate}}</label>
-                </div>
-            </div>
-            <div class="col-1">
-                <div class="d-flex flex-column">
-                    <label>8954267145</label>
-                    <label class="text-secondary fs-placeholder">{{ "invoice.nip" | translate}}</label>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="d-flex flex-column">
-                    <label>13.10.2019</label>
-                    <label class="text-secondary fs-placeholder">{{ "documents.date_created" | translate}}</label>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="d-flex flex-column">
-                    <label>11:38</label>
-                    <label class="text-secondary fs-placeholder">{{ "invoice.time_approval" | translate}}</label>
-                </div>
-            </div>
-            <div class="col-1">
-                <div class="d-flex flex-column">
-                    <label>9022WA</label>
-                    <label class="text-secondary fs-placeholder">{{ "invoice.approval_by" | translate}}</label>
-                </div>
-            </div>
-        </div>
-
-        <div class="d-flex justify-content-between align-items-center col-5 mt-3 mb-3">
-            <button class="btn btn-primary rounded-pill text-uppercase" style="width: 200px;" data-bs-toggle="modal" data-bs-target="#editDataModal">{{ "invoice.data_correction" | translate}}</button>
-            <button class="btn btn-primary rounded-pill text-uppercase" style="width: 200px;" type="button">{{ "invoice.reset_correction" | translate}}</button>
-            <button class="btn btn-primary rounded-pill text-uppercase" style="width: 200px;" type="button">{{ "invoice.print" | translate}}</button>
-        </div>
-
-
-
-        <ul class="list-group overflow-auto h-50">
-            <li class="list-group-item">
-                <div class="row align-items-center">
-                    <div class="col-1">
-                        <img src="https://f01.esfr.pl/foto/4/66988569337/5efcf64af065e6405439db821118bb44/philips-70pus7805-smart-tv-uhd-ambilight-philips,66988569337_8.jpg" alt="..." class="img-thumbnail" style="width: 100px;">
-                    </div>
-                    <div class="col-4">
-                        <div class="d-flex flex-column">
-                            <label class="fw-bolder">Philips 70PUS6704/12</label>
-                            <label class="fs-placeholder text-secondary">{{ "invoice.product_name" | translate}}</label>
-                        </div>
-                    </div>
-
-                    <div class="col-2">
-                        <div class="d-flex flex-column">
-                            <label>telewizor LED</label>
-                            <label class="text-secondary fs-placeholder">{{ "invoice.commodity_group" | translate}}</label>
-                        </div>
-                    </div>
-
-                    <div class="col-1">
-                        <div class="d-flex flex-column">
-                            <label>123456</label>
-                            <label class="text-secondary fs-placeholder">{{ "invoice.plu" | translate}}</label>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <div class="d-flex flex-column">
-                            <label>1</label>
-                            <label class="text-secondary fs-placeholder">{{ "product.count" | translate}}</label>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <div class="d-flex flex-column">
-                            <label>3 458,00 zł</label>
-                            <label class="text-secondary fs-placeholder">{{ "invoice.unit_price" | translate}}</label>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <div class="d-flex flex-column">
-                            <label>3 458,00 zł</label>
-                            <label class="text-secondary fs-placeholder">{{ "product.sum" | translate}}</label>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="list-group-item">
-                <div class="row align-items-center">
-                    <div class="col-1">
-                        <img src="https://f01.esfr.pl/foto/4/66988569337/5efcf64af065e6405439db821118bb44/philips-70pus7805-smart-tv-uhd-ambilight-philips,66988569337_8.jpg" alt="..." class="img-thumbnail" style="width: 100px;">
-                    </div>
-                    <div class="col-4">
-                        <div class="d-flex flex-column">
-                            <label class="fw-bolder">Philips 70PUS6704/12</label>
-                            <label class="fs-placeholder text-secondary">{{ "invoice.product_name" | translate}}</label>
-                        </div>
-                    </div>
-
-                    <div class="col-2">
-                        <div class="d-flex flex-column">
-                            <label>telewizor LED</label>
-                            <label class="text-secondary fs-placeholder">{{ "invoice.commodity_group" | translate}}</label>
-                        </div>
-                    </div>
-
-                    <div class="col-1">
-                        <div class="d-flex flex-column">
-                            <label>123456</label>
-                            <label class="text-secondary fs-placeholder">{{ "invoice.plu" | translate}}</label>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <div class="d-flex flex-column">
-                            <label>1</label>
-                            <label class="text-secondary fs-placeholder">{{ "product.count" | translate}}</label>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <div class="d-flex flex-column">
-                            <label>3 458,00 zł</label>
-                            <label class="text-secondary fs-placeholder">{{ "invoice.unit_price" | translate}}</label>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <div class="d-flex flex-column">
-                            <label>3 458,00 zł</label>
-                            <label class="text-secondary fs-placeholder">{{ "product.sum" | translate}}</label>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="list-group-item">
-                <div class="row align-items-center">
-                    <div class="col-1">
-                        <img src="https://f01.esfr.pl/foto/4/66988569337/5efcf64af065e6405439db821118bb44/philips-70pus7805-smart-tv-uhd-ambilight-philips,66988569337_8.jpg" alt="..." class="img-thumbnail" style="width: 100px;">
-                    </div>
-                    <div class="col-4">
-                        <div class="d-flex flex-column">
-                            <label class="fw-bolder">Philips 70PUS6704/12</label>
-                            <label class="fs-placeholder text-secondary">{{ "invoice.product_name" | translate}}</label>
-                        </div>
-                    </div>
-
-                    <div class="col-2">
-                        <div class="d-flex flex-column">
-                            <label>telewizor LED</label>
-                            <label class="text-secondary fs-placeholder">{{ "invoice.commodity_group" | translate}}</label>
-                        </div>
-                    </div>
-
-                    <div class="col-1">
-                        <div class="d-flex flex-column">
-                            <label>123456</label>
-                            <label class="text-secondary fs-placeholder">{{ "invoice.plu" | translate}}</label>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <div class="d-flex flex-column">
-                            <label>1</label>
-                            <label class="text-secondary fs-placeholder">{{ "product.count" | translate}}</label>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <div class="d-flex flex-column">
-                            <label>3 458,00 zł</label>
-                            <label class="text-secondary fs-placeholder">{{ "invoice.unit_price" | translate }}</label>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <div class="d-flex flex-column">
-                            <label>3 458,00 zł</label>
-                            <label class="text-secondary fs-placeholder">{{ "product.sum" | translate}}</label>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-    </div>
+<div class="offcanvas-header fs-4 fw-bold align-items-center">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">{{ "invoice.title" | translate}} <span class="text-secondary">1194364</span>
+        <button type="button" class="btn btn-outline-success btn-sm btn-sm-header fw-bolder border-2 rounded-pill text-uppercase ms-3">{{ "invoice.confirmed" | translate}}</button>
+        <button type="button" class="btn btn-outline-primary btn-sm btn-sm-header fw-bolder border-2 rounded-pill text-uppercase ms-3">{{ "invoice.corrective" | translate}}</button>
+    </h5>
+    <button type="button" class="btn-close text-reset align-top" style="font-size: 1rem;" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
-<!-- </div> -->
+<div class="offcanvas-body">
+
+    <div class="row align-items-center">
+        <div class="col-2">
+            <div class="d-flex flex-column">
+                <label class="fw-bolder">Arek Milik</label>
+                <label class="fs-placeholder text-secondary">{{ "invoice.first_second_name" | translate}}</label>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="d-flex flex-column">
+                <label>Muszkieterów 15, 00-268 Warszawa</label>
+                <label class="text-secondary fs-placeholder">{{ "invoice.address" | translate}}</label>
+            </div>
+        </div>
+        <div class="col-1">
+            <div class="d-flex flex-column">
+                <label>8954267145</label>
+                <label class="text-secondary fs-placeholder">{{ "invoice.nip" | translate}}</label>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="d-flex flex-column">
+                <label>13.10.2019</label>
+                <label class="text-secondary fs-placeholder">{{ "documents.date_created" | translate}}</label>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="d-flex flex-column">
+                <label>11:38</label>
+                <label class="text-secondary fs-placeholder">{{ "invoice.time_approval" | translate}}</label>
+            </div>
+        </div>
+        <div class="col-1">
+            <div class="d-flex flex-column">
+                <label>9022WA</label>
+                <label class="text-secondary fs-placeholder">{{ "invoice.approval_by" | translate}}</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center col-5 mt-3 mb-3">
+        <button class="btn btn-primary rounded-pill text-uppercase" style="width: 200px;" data-bs-toggle="modal" data-bs-target="#editDataModal">{{ "invoice.data_correction" | translate}}</button>
+        <button class="btn btn-primary rounded-pill text-uppercase" style="width: 200px;" type="button">{{ "invoice.reset_correction" | translate}}</button>
+        <button class="btn btn-primary rounded-pill text-uppercase" style="width: 200px;" type="button">{{ "invoice.print" | translate}}</button>
+    </div>
+
+    <ul class="list-group overflow-auto h-50">
+        <li class="list-group-item">
+            <invoice-product-item></invoice-product-item>
+        </li>
+        <li class="list-group-item">
+            <invoice-product-item></invoice-product-item>
+        </li>
+        <li class="list-group-item">
+            <invoice-product-item></invoice-product-item>
+        </li>
+    </ul>
+
+</div>

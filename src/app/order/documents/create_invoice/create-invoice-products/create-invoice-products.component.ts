@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as bootstrap from 'bootstrap';
 
 @Component({
@@ -8,15 +9,19 @@ import * as bootstrap from 'bootstrap';
 })
 export class CreateInvoiceProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    var createInvoiceProducts = document.getElementById('createInvoiceProducts')
-    var dataClientInvoice = document.getElementById('dataClientInvoice')
-    createInvoiceProducts.addEventListener('hidden.bs.offcanvas', function (e) {
-        var dataClientInvoiceOffCanvas = new bootstrap.Offcanvas(dataClientInvoice)
-        dataClientInvoiceOffCanvas.show()
-    })
+    // var createInvoiceProducts = document.getElementById('createInvoiceProducts')
+    // var dataClientInvoice = document.getElementById('dataClientInvoice')
+    // createInvoiceProducts.addEventListener('hidden.bs.offcanvas', function (e) {
+    //     var dataClientInvoiceOffCanvas = new bootstrap.Offcanvas(dataClientInvoice)
+    //     dataClientInvoiceOffCanvas.show()
+    // })
+  }
+
+  confirm() {
+    this.router.navigate([{outlets: {canvasOutlet: ['create-invoice-client-data']}}], { relativeTo: this.route.parent })
   }
 
 }

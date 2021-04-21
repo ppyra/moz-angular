@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CanvasComponentsService } from 'src/app/common/components/offcanvas-bootom/canvas-components.service';
+//import { CanvasComponentsService } from 'src/app/common/components/offcanvas-bootom/component.model.service';
 import { NotifierService } from 'src/app/common/services/notifier.service';
 import * as bootstrap from 'bootstrap';
 @Component({
@@ -10,9 +10,13 @@ import * as bootstrap from 'bootstrap';
 })
 export class OrderItemComponent implements OnInit {
 
-  constructor(protected notifierService: NotifierService, private canvasComponentsService: CanvasComponentsService, private route: ActivatedRoute, private router: Router) { }
+  constructor(protected notifierService: NotifierService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  issueAnInvoice() {
+    this.router.navigate(['canvas', {outlets: {canvasOutlet: ['create-invoice']}}]);
   }
 
   showNotifier() {
@@ -28,7 +32,7 @@ export class OrderItemComponent implements OnInit {
     //var invoiceOffCanvas = document.getElementById('offcanvasWrapper');
     //var invoiceOffCanvasOffCanvas = new bootstrap.Offcanvas(invoiceOffCanvas);
     //invoiceOffCanvasOffCanvas.show();
-    this.router.navigate(['canvas', {outlets: {innerOutlet: ['documents']}}]); //, { relativeTo: this.route.parent })
+    this.router.navigate(['canvas', {outlets: {canvasOutlet: ['documents']}}]); //, { relativeTo: this.route.parent })
     //this.router.navigate(['canvas'], { relativeTo: this.route })
   }
 }

@@ -1,324 +1,61 @@
-<div class="offcanvas offcanvas-bottom rounded-3 m-1" style="height: fit-content;" tabindex="-1" id="dataClientInvoice">
-    <div class="m-3">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasBottomLabel">{{ "invoice.issue_of_an_invoice" | translate}} <span class="text-secondary">{{ "invoice.selected_elements" | translate}}: 5</span>
-                <button class="btn btn-outline-primary rounded-pill text-uppercase fw-bold ms-4" type="button">+ {{ "invoice.new_invoice_details" | translate}}</button>
-            </h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<!-- <div class="offcanvas offcanvas-bottom rounded-3 m-1" style="height: fit-content;" tabindex="-1" id="dataClientInvoice"> -->
+<!-- <div class=""> -->
+<div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">{{ "invoice.issue_of_an_invoice" | translate}} <span class="text-secondary">{{ "invoice.selected_elements" | translate}}: 5</span>
+        <button class="btn btn-outline-primary rounded-pill text-uppercase fw-bold ms-4" type="button">+ {{ "invoice.new_invoice_details" | translate}}</button>
+    </h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+    <div class="d-flex flex-column">
+        <div class="alert alert-primary" role="alert">
+            <h4 class="alert-heading fs-4">Kupując jako osoba fizyczna nie będziesz mógł zmineić na zakup przez firmę</h4>
         </div>
-        <div class="offcanvas-body">
-            <div class="d-flex flex-column">
-                <div class="alert alert-primary" role="alert">
-                    <h4 class="alert-heading fs-4">Kupując jako osoba fizyczna nie będziesz mógł zmineić na zakup przez firmę</h4>
-                </div>
 
-                <!--Carousel Wrapper-->
-                <div id="multi-item-example" class="carousel slide" data-interval="false" data-ride="carousel">
+        <carousel-client-data></carousel-client-data>
 
-                    <!--/.Controls-->
-
-                    <button class="carousel-control-prev w-auto" type="button" data-bs-target="#multi-item-example" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next w-auto" type="button" data-bs-target="#multi-item-example" data-bs-slide="next">
-                      <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-
-                    <!--Slides-->
-                    <div class="carousel-inner w-75 mx-auto" role="listbox">
-
-                        <!--First slide-->
-                        <div class="carousel-item active">
-
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="card position-relative bg-light border rounded-3 shadow">
-                                        <label>
-                                  <div class="card-body">
-                                      <input class="form-check-input checkmark" type="checkbox" value="" id="flexCheckChecked" checked>
-                                          <div class="w-100 mt-4">
-                                              <div class="d-flex justify-content-between">
-                                                  <h3 class="fs-4 fw-bolder">Katarzyna Lek</h3>
-                                                  <a href="#">{{ "invoice.change" | translate}}</a>
-                                              </div>
-                                              <div class="d-flex flex-column">
-                                                  <h4 class="fs-6">Muszkieterów 15,</h4>
-                                                  <h4 class="fs-6">00-268 Warszawa</h4>
-                                              </div>
-                                          </div>
-                                  </div>
-                               </label>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 clearfix d-none d-md-block">
-                                    <div class="card mb-2">
-                                        <div class="card position-relative bg-light border rounded-3 shadow">
-                                            <label>
-                                      <div class="card-body">
-                                          <input class="form-check-input checkmark" type="checkbox" value="" id="flexCheckChecked" checked>
-                                              <div class="w-100 mt-4">
-                                                  <div class="d-flex justify-content-between">
-                                                      <h3 class="fs-4 fw-bolder">Magdalena Nyc</h3>
-                                                      <a href="#">{{ "invoice.change" | translate}}</a>
-                                                  </div>
-                                                  <div class="d-flex flex-column">
-                                                      <h4 class="fs-6">Muszkieterów 15,</h4>
-                                                      <h4 class="fs-6">00-268 Warszawa</h4>
-                                                  </div>
-                                              </div>
-                                      </div>
-                                   </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 clearfix d-none d-md-block">
-                                    <div class="card mb-2">
-                                        <div class="card position-relative bg-light border rounded-3 shadow">
-                                            <label>
-                                      <div class="card-body">
-                                          <input class="form-check-input checkmark" type="checkbox" value="" id="flexCheckChecked" checked>
-                                              <div class="w-100 mt-4">
-                                                  <div class="d-flex justify-content-between">
-                                                      <h3 class="fs-4 fw-bolder">Sebastian Lech</h3>
-                                                      <a href="#">{{ "invoice.change" | translate}}</a>
-                                                  </div>
-                                                  <div class="d-flex flex-column">
-                                                      <h4 class="fs-6">Muszkieterów 15,</h4>
-                                                      <h4 class="fs-6">00-268 Warszawa</h4>
-                                                  </div>
-                                              </div>
-                                      </div>
-                                   </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 clearfix d-none d-md-block">
-                                    <div class="card mb-2">
-                                        <div class="card position-relative bg-light border rounded-3 shadow">
-                                            <label>
-                                      <div class="card-body">
-                                          <input class="form-check-input checkmark" type="checkbox" value="" id="flexCheckChecked" checked>
-                                              <div class="w-100 mt-4">
-                                                  <div class="d-flex justify-content-between">
-                                                      <h3 class="fs-4 fw-bolder">Sebastian Lech</h3>
-                                                      <a href="#">{{ "invoice.change" | translate}}</a>
-                                                  </div>
-                                                  <div class="d-flex flex-column">
-                                                      <h4 class="fs-6">Muszkieterów 15,</h4>
-                                                      <h4 class="fs-6">00-268 Warszawa</h4>
-                                                  </div>
-                                              </div>
-                                      </div>
-                                   </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!--/.First slide-->
-
-                        <!--Second slide-->
-                        <div class="carousel-item">
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card mb-2">
-                                        <div class="card position-relative bg-light border rounded-3 shadow">
-                                            <label>
-                                      <div class="card-body">
-                                          <input class="form-check-input checkmark" type="checkbox" value="" id="flexCheckChecked" checked>
-                                              <div class="w-100 mt-4">
-                                                  <div class="d-flex justify-content-between">
-                                                      <h3 class="fs-4 fw-bolder">Kazimierz Kuz</h3>
-                                                      <a href="#">{{ "invoice.change" | translate}}</a>
-                                                  </div>
-                                                  <div class="d-flex flex-column">
-                                                      <h4 class="fs-6">Muszkieterów 15,</h4>
-                                                      <h4 class="fs-6">00-268 Warszawa</h4>
-                                                  </div>
-                                              </div>
-                                      </div>
-                                   </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card mb-2">
-                                        <div class="card position-relative bg-light border rounded-3 shadow">
-                                            <label>
-                                      <div class="card-body">
-                                          <input class="form-check-input checkmark" type="checkbox" value="" id="flexCheckChecked" checked>
-                                              <div class="w-100 mt-4">
-                                                  <div class="d-flex justify-content-between">
-                                                      <h3 class="fs-4 fw-bolder">Jan Sudoł</h3>
-                                                      <a href="#">{{ "invoice.change" | translate}}</a>
-                                                  </div>
-                                                  <div class="d-flex flex-column">
-                                                      <h4 class="fs-6">Muszkieterów 15,</h4>
-                                                      <h4 class="fs-6">00-268 Warszawa</h4>
-                                                  </div>
-                                              </div>
-                                      </div>
-                                   </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card mb-2">
-                                        <div class="card position-relative bg-light border rounded-3 shadow">
-                                            <label>
-                                      <div class="card-body">
-                                          <input class="form-check-input checkmark" type="checkbox" value="" id="flexCheckChecked" checked>
-                                              <div class="w-100 mt-4">
-                                                  <div class="d-flex justify-content-between">
-                                                      <h3 class="fs-4 fw-bolder">Jacek Zielony</h3>
-                                                      <a href="#">{{ "invoice.change" | translate}}</a>
-                                                  </div>
-                                                  <div class="d-flex flex-column">
-                                                      <h4 class="fs-6">Muszkieterów 15,</h4>
-                                                      <h4 class="fs-6">00-268 Warszawa</h4>
-                                                  </div>
-                                              </div>
-                                      </div>
-                                   </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!--/.Second slide-->
-
-                        <!--Third slide-->
-                        <div class="carousel-item">
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card mb-2">
-                                        <div class="card position-relative bg-light border rounded-3 shadow">
-                                            <label>
-                                      <div class="card-body">
-                                          <input class="form-check-input checkmark" type="checkbox" value="" id="flexCheckChecked" checked>
-                                              <div class="w-100 mt-4">
-                                                  <div class="d-flex justify-content-between">
-                                                      <h3 class="fs-4 fw-bolder">Dorota Rak</h3>
-                                                      <a href="#">{{ "invoice.change" | translate}}</a>
-                                                  </div>
-                                                  <div class="d-flex flex-column">
-                                                      <h4 class="fs-6">Muszkieterów 15,</h4>
-                                                      <h4 class="fs-6">00-268 Warszawa</h4>
-                                                  </div>
-                                              </div>
-                                      </div>
-                                   </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card mb-2">
-                                        <div class="card position-relative bg-light border rounded-3 shadow">
-                                            <label>
-                                      <div class="card-body">
-                                          <input class="form-check-input checkmark" type="checkbox" value="" id="flexCheckChecked" checked>
-                                              <div class="w-100 mt-4">
-                                                  <div class="d-flex justify-content-between">
-                                                      <h3 class="fs-4 fw-bolder">Maciej Żak</h3>
-                                                      <a href="#">{{ "invoice.change" | translate}}</a>
-                                                  </div>
-                                                  <div class="d-flex flex-column">
-                                                      <h4 class="fs-6">Muszkieterów 15,</h4>
-                                                      <h4 class="fs-6">00-268 Warszawa</h4>
-                                                  </div>
-                                              </div>
-                                      </div>
-                                   </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card mb-2">
-                                        <div class="card position-relative bg-light border rounded-3 shadow">
-                                            <label>
-                                      <div class="card-body">
-                                          <input class="form-check-input checkmark" type="checkbox" value="" id="flexCheckChecked" checked>
-                                              <div class="w-100 mt-4">
-                                                  <div class="d-flex justify-content-between">
-                                                      <h3 class="fs-4 fw-bolder">Adam Kowalski</h3>
-                                                      <a href="#">{{ "invoice.change" | translate}}</a>
-                                                  </div>
-                                                  <div class="d-flex flex-column">
-                                                      <h4 class="fs-6">Muszkieterów 15,</h4>
-                                                      <h4 class="fs-6">00-268 Warszawa</h4>
-                                                  </div>
-                                              </div>
-                                      </div>
-                                   </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!--/.Third slide-->
-
+        <!-- formularz nowych danych klienta -->
+        <form class="mt-4">
+            <div class="row">
+                <div class="col-4">
+                    <div class="mb-3">
+                        <input type="text" class="d-inline form-control" id="name" placeholder="Imię" required>
                     </div>
-                    <!--/.Slides-->
-
-                </div>
-                <!--/.Carousel Wrapper-->
-
-                <!-- formularz nowych danych klienta -->
-                <form class="mt-4">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <input type="text" class="d-inline form-control" id="name" placeholder="Imię" required>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="second_name" placeholder="Nazwisko" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="post_code" placeholder="Kod pocztowy" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="city" placeholder="Miejscowość" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="street" placeholder="Ulica" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="row gx-5">
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="home_no" placeholder="Numer domu" required>
                             </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="second_name" placeholder="Nazwisko" required>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="flat_no" placeholder="Numer mieszkania">
                             </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="post_code" placeholder="Kod pocztowy" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="city" placeholder="Miejscowość" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="street" placeholder="Ulica" required>
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="row gx-5">
-                                    <div class="col-6">
-                                        <input type="text" class="form-control" id="home_no" placeholder="Numer domu" required>
-                                    </div>
-                                    <div class="col-6">
-                                        <input type="text" class="form-control" id="flat_no" placeholder="Numer mieszkania">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <button class="btn btn-outline-primary rounded-pill text-uppercase  w-25 mx-auto" type="submit">{{ "invoice.search_customer" | translate}}</button>
                         </div>
                     </div>
-                </form>
-
-                <hr class="w-100">
-                <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-primary rounded-pill text-uppercase w-25" type="button">{{ "invoice.exhibit" | translate}}</button>
-                    <button class="btn btn-outline-light bg-secondary rounded-pill text-uppercase w-25" type="button">{{ "ignore" | translate}}</button>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-outline-primary rounded-pill text-uppercase  w-25 mx-auto" type="button" (click)="searchCustomer()">{{ "invoice.search_customer" | translate}}</button>
                 </div>
             </div>
+        </form>
+
+        <hr class="w-100">
+        <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-primary rounded-pill text-uppercase w-25" type="button" (click)="exhibitions()">{{ "invoice.exhibit" | translate}}</button>
+            <button class="btn btn-outline-light bg-secondary rounded-pill text-uppercase w-25 ms-3" type="button">{{ "ignore" | translate}}</button>
         </div>
     </div>
 </div>
+<!-- </div> -->
+<!-- </div> -->

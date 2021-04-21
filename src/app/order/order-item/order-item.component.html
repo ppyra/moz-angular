@@ -42,7 +42,7 @@
 
         <div class="row align-items-center">
             <div class="col-3">
-                <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" data-bs-toggle="offcanvas" data-bs-target="#createInvoiceProducts" aria-controls="offcanvasBottom" type="button">{{ "order.issue_an_invoice" | translate}}</button>
+                <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-100 fw-bolder" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWrapper" (click)="issueAnInvoice()" aria-controls="offcanvasBottom" type="button">{{ "order.issue_an_invoice" | translate}}</button>
             </div>
 
             <div class="col-3">
