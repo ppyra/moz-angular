@@ -4,8 +4,10 @@ import { CreateInvoiceDataClitentComponent } from "../order/documents/create_inv
 import { CreateInvoiceProductsComponent } from "../order/documents/create_invoice/create-invoice-products/create-invoice-products.component";
 import { InvoiceComponent } from "../order/documents/create_invoice/invoice/invoice.component";
 import { DocumentsComponent } from "../order/documents/documents.component";
+import { InsuranceComponent } from "../order/insurance/insurance.component";
 import { OrderDetailsComponent } from "../order/order-details/order-details.component";
 import { ProductDetailsComponent } from "../order/product/product-details/product-details.component";
+import { ProductOrderListComponent } from "../order/product/product-order-list/product-order-list.component";
 
 export const CanvasRoutes: Routes = [
   {
@@ -37,9 +39,15 @@ export const CanvasRoutes: Routes = [
       component: OrderDetailsComponent
     },
     {
-      path: 'product-details',
+      path: 'product-order-list',
       outlet: "canvasOutlet",
-      component: ProductDetailsComponent
+      component: ProductOrderListComponent
+    },
+    {
+      path: 'insurance',
+      outlet: "canvasOutlet",
+      component: InsuranceComponent,
+      data : {showDiscountButton: false, showDetailsButton: false }
     },
     {
       path: '',

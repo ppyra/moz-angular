@@ -16,6 +16,7 @@ import { SharedModule } from './common/common.module';
 import { ProductModule } from './order/product/product.module';
 import { DocumentsModule } from './order/documents/documents.module';
 import { OrderDetailsComponent } from './order/order-details/order-details.component';
+import { InsuranceComponent } from './order/insurance/insurance.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -34,6 +35,7 @@ export function appInitializerFactory(translate: TranslateService) {
     SalesRegistrationComponent,
     OrderItemComponent,
     OrderDetailsComponent,
+    InsuranceComponent,
   ],
   imports: [
     BrowserModule,

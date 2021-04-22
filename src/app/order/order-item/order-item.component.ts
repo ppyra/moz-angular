@@ -24,7 +24,7 @@ export class OrderItemComponent implements OnInit {
   }
 
   addGuarantee() {
-
+    this.router.navigate(['canvas', {outlets: {canvasOutlet: ['insurance']}}]);
   }
 
   showDocuments() {

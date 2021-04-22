@@ -13,7 +13,7 @@ export class OrderDetailsComponent implements OnInit {
   @Output() componentHeader = new EventEmitter<ComponentModel>();
   constructor(private translate: TranslateService, private componentModelService: ComponentModelService) {
     // this.componentHeader.emit(new ComponentModel(this.translate.instant('product.details'), 'Philips 70PUS6704/12'));
-    componentModelService.loadComponentDesc(new ComponentModel(this.translate.instant('product.details'), 'Philips 70PUS6704/12'));
+    componentModelService.loadComponent(new ComponentModel(this.translate.instant('product.details'), 'Philips 70PUS6704/12'));
     //this.componentHeader = new ComponentModel(this.translate.instant('product.details'), 'Philips 70PUS6704/12');
   }
 

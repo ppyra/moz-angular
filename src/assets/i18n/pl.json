@@ -90,5 +90,8 @@
         "server_down": "Nie można nawiązać połączenia z serwerem MOZ",
         "server_down_message": "Nie można uzyskać połączenia z serwerem MOZ bądź serwer nie działa. Skontaktuj się z administratorem",
         "request_timeout": "Upłynął czas oczekiwania na odpowiedź"
+    },
+    "insurance": {
+        "add_insurance": "Dodawanie ubezpieczenia"
     }
 }

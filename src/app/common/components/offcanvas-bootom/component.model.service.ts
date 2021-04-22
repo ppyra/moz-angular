@@ -14,7 +14,7 @@ export class ComponentModelService {
     return this.componentSubject.asObservable();
   }
 
-  loadComponentDesc(component: ComponentModel) {
+  loadComponent(component: ComponentModel) {
     this.componentSubject.next(component);
   }
 }
