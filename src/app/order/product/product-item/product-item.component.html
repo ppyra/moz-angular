@@ -1,7 +1,7 @@
 <!-- <div class="card">
     <div class="card-body"> -->
 <div class="d-flex flex-row align-items-center">
-    <ng-content></ng-content>
+    <ng-content select="select-item"></ng-content>
     <div class="d-flex flex-column col-4">
         <div class="d-flex flex-row justify-content-around align-items-center">
             <div class="d-flex flex-column">
@@ -24,6 +24,7 @@
             <label for="count" class="control-label fs-5">3</label>
             <label class="control-label text-secondary" id="count">{{ "product.count" | translate}}</label>
         </div>
+        <ng-content select="number-spinner-component"></ng-content>
         <div class="d-flex flex-column col-2">
             <label for="sum" class="control-label fs-5">11 456,00zł</label>
             <label class="control-label text-secondary" id="sum">{{ "product.sum" | translate}}</label>

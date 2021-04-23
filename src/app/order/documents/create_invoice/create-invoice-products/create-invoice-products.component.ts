@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit, ViewContainerRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as bootstrap from 'bootstrap';
+import { NumberSpinnerComponent } from 'src/app/common/components/number-spinner/number-spinner.component';
 
 @Component({
   selector: 'create-invoice-products',

@@ -17,8 +17,4 @@ export class InsuranceComponent implements OnInit {
   confirm(){
     console.log("potwierdzam dodanie ubezpieczenia dla wybranych produktów");
   }
-
-  close() {
-    // todo przesłać event o pokazanu rabatu i szczegółów
-  }
 }

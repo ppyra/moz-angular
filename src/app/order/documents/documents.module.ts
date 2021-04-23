@@ -10,6 +10,9 @@ import { DocumentsComponent } from "./documents.component";
 import { InvoiceProductItemComponent } from './create_invoice/invoice/invoice-product-item/invoice-product-item.component';
 import { CarouselClientDataComponent } from './create_invoice/carousel-client-data/carousel-client-data.component';
 import { ClientAddressCardComponent } from './create_invoice/carousel-client-data/client-address-card/client-address-card.component';
+import { SharedModule } from "src/app/common/common.module";
+import { ProductItemComponent } from "../product/product-item/product-item.component";
+import { ProductModule } from "../product/product.module";
 
 
 @NgModule({
@@ -26,6 +29,8 @@ import { ClientAddressCardComponent } from './create_invoice/carousel-client-dat
       CommonModule,
       FormsModule,
       RouterModule,
+      //SharedModule,
+      ProductModule,
       TranslateModule.forChild()
   ],
   exports: [

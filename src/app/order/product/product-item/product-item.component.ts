@@ -23,8 +23,12 @@ export class ProductItemComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe( data =>
         {
-          this.showDiscountButton = data['showDetailsButton'];
-          this.showDetailsButton = data['showDetailsButton'];
+          if(Object.keys(data).length) {
+            this.showDiscountButton = data['showDetailsButton'];
+            this.showDetailsButton = data['showDetailsButton'];
+            console.log( this.showDiscountButton,this.showDetailsButton);
+          }
+
         });
   }
 
