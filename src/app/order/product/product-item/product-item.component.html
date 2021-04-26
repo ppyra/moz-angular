@@ -1,9 +1,7 @@
-<!-- <div class="card">
-    <div class="card-body"> -->
 <div class="d-flex flex-row align-items-center">
-    <ng-content select="select-item"></ng-content>
+    <ng-content select="[select-item]"></ng-content>
     <div class="d-flex flex-column col-4">
-        <div class="d-flex flex-row justify-content-around align-items-center">
+        <!-- <div class="d-flex flex-row justify-content-around align-items-center">
             <div class="d-flex flex-column">
                 <img src="https://f01.esfr.pl/foto/4/66988569337/5efcf64af065e6405439db821118bb44/philips-70pus7805-smart-tv-uhd-ambilight-philips,66988569337_8.jpg" alt="..." class="img-thumbnail" style="width: 150px;">
             </div>
@@ -14,17 +12,19 @@
                     <label class="control-label text-secondary ms-4" id="number">1194364</label>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <photo-description imgWidth="150"></photo-description>
     </div>
+
     <div class="d-flex flex-row justify-content-center align-items-center w-100">
         <div *ngIf="showDiscountButton" class="col-2">
             <a href="#" class="btn btn-outline-secondary btn-light btn-sm rounded-pill text-uppercase"><i class="bi bi-check-circle"></i> {{ "product.discount" | translate}}</a>
         </div>
-        <div class="d-flex flex-column col-2">
+        <div *ngIf="showPieces" class="d-flex flex-column col-2">
             <label for="count" class="control-label fs-5">3</label>
             <label class="control-label text-secondary" id="count">{{ "product.count" | translate}}</label>
         </div>
-        <ng-content select="number-spinner-component"></ng-content>
+        <ng-content select="[numberSpinner]"></ng-content>
         <div class="d-flex flex-column col-2">
             <label for="sum" class="control-label fs-5">11 456,00zł</label>
             <label class="control-label text-secondary" id="sum">{{ "product.sum" | translate}}</label>
@@ -38,5 +38,3 @@
         </div>
     </div>
 </div>
-<!-- </div>
-</div> -->

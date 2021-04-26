@@ -13,6 +13,7 @@ export class ProductItemComponent implements OnInit, OnDestroy {
 
   showDiscountButton: boolean = true;
   showDetailsButton: boolean = true;
+  showPieces: boolean = true;
   ngUnsubscribe = new Subject()
 
   constructor(private route: ActivatedRoute, private router: Router) { }
@@ -26,6 +27,7 @@ export class ProductItemComponent implements OnInit, OnDestroy {
           if(Object.keys(data).length) {
             this.showDiscountButton = data['showDetailsButton'];
             this.showDetailsButton = data['showDetailsButton'];
+            this.showPieces = data['showPieces'];
             console.log( this.showDiscountButton,this.showDetailsButton);
           }
 

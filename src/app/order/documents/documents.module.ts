@@ -13,6 +13,7 @@ import { ClientAddressCardComponent } from './create_invoice/carousel-client-dat
 import { SharedModule } from "src/app/common/common.module";
 import { ProductItemComponent } from "../product/product-item/product-item.component";
 import { ProductModule } from "../product/product.module";
+import { NumberSpinnerComponent } from "src/app/common/components/number-spinner/number-spinner.component";
 
 
 @NgModule({
@@ -23,13 +24,15 @@ import { ProductModule } from "../product/product.module";
     DocumentsComponent,
     InvoiceProductItemComponent,
     CarouselClientDataComponent,
-    ClientAddressCardComponent
+    ClientAddressCardComponent,
+    //NumberSpinnerComponent
   ],
   imports: [
       CommonModule,
+      //NumberSpinnerComponent,
       FormsModule,
       RouterModule,
-      //SharedModule,
+      SharedModule,
       ProductModule,
       TranslateModule.forChild()
   ],

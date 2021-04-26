@@ -26,7 +26,8 @@ export const CanvasRoutes: Routes = [
     {
       path: 'create-invoice',
       outlet: "canvasOutlet",
-      component: CreateInvoiceProductsComponent
+      component: CreateInvoiceProductsComponent,
+      data : {showDiscountButton: false, showDetailsButton: false, showPieces: false }
     },
     {
       path: 'create-invoice-client-data',
@@ -36,7 +37,8 @@ export const CanvasRoutes: Routes = [
     {
       path: 'order-details',
       outlet: "canvasOutlet",
-      component: OrderDetailsComponent
+      component: OrderDetailsComponent,
+      data : {showDiscountButton: false, showDetailsButton: false, showPieces: true}
     },
     {
       path: 'product-order-list',

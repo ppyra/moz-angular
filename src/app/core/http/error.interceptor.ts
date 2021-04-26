@@ -34,6 +34,10 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
                         switch (businessException) {
                             case 'SomeBusinessCase':
                                 // to do
+                                /**
+                                 * brak stanu towaru
+                                 * brak zgłoszenia SO
+                                */
                                 this.notifier.warning("some body text", "title");
                                 break;
                         }

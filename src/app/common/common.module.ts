@@ -13,7 +13,7 @@ import { NumberSpinnerComponent } from './components/number-spinner/number-spinn
   imports: [
     NotifierModule,
     CommonModule,
-    DocumentsModule,
+   // DocumentsModule,
     RouterModule,
     SharedRoutingModule,
     TranslateModule.forChild()
@@ -26,7 +26,6 @@ import { NumberSpinnerComponent } from './components/number-spinner/number-spinn
     TranslateModule,
     NotifierModule,
     ModalComponent,
-    //RouterModule,
     OffcanvasBootomComponent,
     NumberSpinnerComponent
   ]
