@@ -1,3 +1,4 @@
+import { OrderPart } from './../../../../common/components/offcanvas-bootom/component.model';
 import { Component, ComponentFactoryResolver, OnInit, ViewContainerRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as bootstrap from 'bootstrap';
@@ -10,6 +11,7 @@ import { NumberSpinnerComponent } from 'src/app/common/components/number-spinner
 })
 export class CreateInvoiceProductsComponent implements OnInit {
 
+  OrderPart = OrderPart;
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ComponentModel } from 'src/app/common/components/offcanvas-bootom/component.model';
+import { ComponentModel, OrderPart } from 'src/app/common/components/offcanvas-bootom/component.model';
 import { ComponentModelService } from 'src/app/common/components/offcanvas-bootom/component.model.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { ComponentModelService } from 'src/app/common/components/offcanvas-booto
 })
 export class InsuranceComponent implements OnInit {
 
+  OrderPart = OrderPart;
   constructor(private componentModelService: ComponentModelService) { }
 
   ngOnInit(): void {

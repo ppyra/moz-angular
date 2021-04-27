@@ -9,3 +9,10 @@ export class ComponentModel {
     this.secondatyTitle = secondatyTitle;
   }
 }
+
+export enum OrderPart {
+  ORDER = 'order',
+  ORDER_DETAILS ='order_details',
+  INSURANCE = 'insurance',
+  CREATE_INVOICE = 'create_invoice'
+}

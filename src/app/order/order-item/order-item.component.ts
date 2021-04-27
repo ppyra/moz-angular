@@ -20,7 +20,7 @@ export class OrderItemComponent implements OnInit {
   }
 
   showNotifier() {
-    this.notifierService.success("some alert", 'title', true);
+    this.notifierService.error("some alert", 'title', true);
   }
 
   addGuarantee() {
