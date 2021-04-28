@@ -26,28 +26,30 @@
         </div>
     </div>
 </div> -->
-<div class="row align-items-center">
+
+<!-- <div class="row align-items-center">
     <ng-content select="[select-item]"></ng-content>
-    <div [class]="imgDescCol">
-        <photo-description [imgWidth]="imgWidth"></photo-description>
-    </div>
+    <photo-description [class]="imgDescCol" [imgWidth]="imgWidth"></photo-description>
     <div *ngIf="showDiscountButton" class="col-2">
         <a href="#" class="btn btn-outline-secondary btn-light btn-sm rounded-pill text-uppercase"><i class="bi bi-check-circle"></i> {{ "product.discount" | translate}}</a>
     </div>
-    <div *ngIf="showPieces" class="d-flex flex-column col-1">
-        <label for="count" class="control-label">3</label>
-        <label class="control-label text-secondary" id="count">{{ "product.count" | translate}}</label>
+    <cell-data-label class="col-1" value="3" label="{{ 'product.count' | translate}}"></cell-data-label>
+    <ng-content select="[numberSpinner]"></ng-content>
+    <cell-data-label class="col-2" value="3" label="{{ 'product.sum' | translate}}"></cell-data-label>
+    <cell-data-label class="col-2" value="w trakcie" label="{{ 'product.status' | translate}}"></cell-data-label>
+    <div *ngIf="showDetailsButton" class="col-2">
+        <button class="btn btn-outline-secondary btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWrapper" (click)="showDetails()">{{ "product.details" | translate }}</button>
+    </div>
+</div> -->
+<div class="row align-items-center">
+    <ng-content select="[select-item]"></ng-content>
+    <photo-description [class]="productItemModel.imgDescCol.colSize" [imageDescriptionProduct]="productItemModel.imgDescCol" [imgWidth]="imgWidth"></photo-description>
+    <div *ngIf="productItemModel.showDiscountButton" class="col-2">
+        <a href="#" class="btn btn-outline-secondary btn-light btn-sm rounded-pill text-uppercase"><i class="bi bi-check-circle"></i> {{ "product.discount" | translate}}</a>
     </div>
     <ng-content select="[numberSpinner]"></ng-content>
-    <div class="d-flex flex-column col-2">
-        <label for="sum" class="control-label">11 456,00zł</label>
-        <label class="control-label text-secondary" id="sum">{{ priceLabel }}</label>
-    </div>
-    <div class="d-flex flex-column col-2">
-        <label for="status" class="control-label">w trakcie</label>
-        <label class="control-label text-secondary" id="status">{{ "product.status" | translate}}</label>
-    </div>
-    <div *ngIf="showDetailsButton" class="d-flex flex-column col-2">
+    <cell-data-label *ngFor="let cell of productItemModel.cellLabelValue" [class]="cell.colSize" [value]="cell.value" [label]="cell.label"></cell-data-label>
+    <div *ngIf="productItemModel.showDetailsButton" class="col-2">
         <button class="btn btn-outline-secondary btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWrapper" (click)="showDetails()">{{ "product.details" | translate }}</button>
     </div>
 </div>

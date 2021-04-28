@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ImageDescriptionProduct } from '../product-item.model';
 
 @Component({
   selector: 'photo-description',
@@ -8,6 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PhotoDescriptionComponent implements OnInit {
 
   @Input() imgWidth: number;
+  @Input() imageDescriptionProduct: ImageDescriptionProduct;
   constructor() { }
 
   ngOnInit() {

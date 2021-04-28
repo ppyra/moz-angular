@@ -6,44 +6,24 @@
     <button type="button" class="btn-close text-reset align-top" style="font-size: 1rem;" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
 <div class="offcanvas-body">
-
     <div class="row align-items-center">
         <div class="col-2">
-            <div class="d-flex flex-column">
-                <label class="fw-bolder">Arek Milik</label>
-                <label class="fs-placeholder text-secondary">{{ "invoice.first_second_name" | translate}}</label>
-            </div>
+            <cell-data-label value="Arek Milik" label="{{ 'invoice.first_second_name' | translate}}"></cell-data-label>
         </div>
-
         <div class="col-2">
-            <div class="d-flex flex-column">
-                <label>Muszkieterów 15, 00-268 Warszawa</label>
-                <label class="text-secondary fs-placeholder">{{ "invoice.address" | translate}}</label>
-            </div>
+            <cell-data-label value="Muszkieterów 15, 00-268 Warszawa" label="{{ 'invoice.address' | translate}}"></cell-data-label>
         </div>
         <div class="col-1">
-            <div class="d-flex flex-column">
-                <label>8954267145</label>
-                <label class="text-secondary fs-placeholder">{{ "invoice.nip" | translate}}</label>
-            </div>
+            <cell-data-label value="8954267145" label="{{ 'invoice.nip' | translate}}"></cell-data-label>
         </div>
         <div class="col-2">
-            <div class="d-flex flex-column">
-                <label>13.10.2019</label>
-                <label class="text-secondary fs-placeholder">{{ "documents.date_created" | translate}}</label>
-            </div>
+            <cell-data-label value="13.10.2019" label="{{ 'documents.date_created' | translate}}"></cell-data-label>
         </div>
         <div class="col-2">
-            <div class="d-flex flex-column">
-                <label>11:38</label>
-                <label class="text-secondary fs-placeholder">{{ "invoice.time_approval" | translate}}</label>
-            </div>
+            <cell-data-label value="11:38" label="{{ 'invoice.time_approval' | translate}}"></cell-data-label>
         </div>
-        <div class="col-1">
-            <div class="d-flex flex-column">
-                <label>9022WA</label>
-                <label class="text-secondary fs-placeholder">{{ "invoice.approval_by" | translate}}</label>
-            </div>
+        <div class="col-2">
+            <cell-data-label value="9022WA" label="{{ 'invoice.approval_by' | translate}}"></cell-data-label>
         </div>
     </div>
 
@@ -55,14 +35,13 @@
 
     <ul class="list-group overflow-auto h-50">
         <li class="list-group-item">
-            <invoice-product-item></invoice-product-item>
+            <product-item [productItemModel]="productItemOrder"></product-item>
         </li>
         <li class="list-group-item">
-            <invoice-product-item></invoice-product-item>
+            <product-item [productItemModel]="productItemOrder"></product-item>
         </li>
         <li class="list-group-item">
-            <invoice-product-item></invoice-product-item>
+            <product-item [productItemModel]="productItemOrder"></product-item>
         </li>
     </ul>
-
 </div>

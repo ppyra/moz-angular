@@ -3,6 +3,8 @@ import { Component, ComponentFactoryResolver, OnInit, ViewContainerRef } from '@
 import { ActivatedRoute, Router } from '@angular/router';
 import * as bootstrap from 'bootstrap';
 import { NumberSpinnerComponent } from 'src/app/common/components/number-spinner/number-spinner.component';
+import { TranslateService } from '@ngx-translate/core';
+import { ProductItemModel, ImageDescriptionProduct, CellLabelValue } from 'src/app/order/product/product-item/product-item.model';
 
 @Component({
   selector: 'create-invoice-products',
@@ -11,16 +13,18 @@ import { NumberSpinnerComponent } from 'src/app/common/components/number-spinner
 })
 export class CreateInvoiceProductsComponent implements OnInit {
 
-  OrderPart = OrderPart;
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  productItemOrder: ProductItemModel;
+  constructor(private route: ActivatedRoute, private router: Router, private translate: TranslateService) { }
 
   ngOnInit(): void {
-    // var createInvoiceProducts = document.getElementById('createInvoiceProducts')
-    // var dataClientInvoice = document.getElementById('dataClientInvoice')
-    // createInvoiceProducts.addEventListener('hidden.bs.offcanvas', function (e) {
-    //     var dataClientInvoiceOffCanvas = new bootstrap.Offcanvas(dataClientInvoice)
-    //     dataClientInvoiceOffCanvas.show()
-    // })
+    this.productItemOrder = new ProductItemModel();
+    this.productItemOrder.imgDescCol = new ImageDescriptionProduct('Philips 70PUS6704/12', 'Telewizor LED', '1194364', 'col-6');
+    this.productItemOrder.showDetailsButton = false;
+    this.productItemOrder.showDiscountButton = false;
+    this.productItemOrder.cellLabelValue = [
+      new CellLabelValue('11 456,00 zł', this.translate.instant('product.sum'), 'col-1'),
+      new CellLabelValue('w trakcie', this.translate.instant('product.status'), 'col-2')
+    ];
   }
 
   confirm() {

@@ -1,3 +1,4 @@
+import { ProductModule } from './../order/product/product.module';
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
@@ -8,12 +9,15 @@ import { ModalComponent } from "./components/modal/modal.component";
 import { NotifierModule } from "./components/notifier/notifier.module";
 import { OffcanvasBootomComponent } from './components/offcanvas-bootom/offcanvas-bootom.component';
 import { NumberSpinnerComponent } from './components/number-spinner/number-spinner.component';
+import { DataTableComponent } from './components/data-table/data-table.component';
+import { CellDataLabelComponent } from './components/cell-data-label/cell-data-label.component';
 
 @NgModule({
   imports: [
     NotifierModule,
     CommonModule,
    // DocumentsModule,
+   //ProductModule,
     RouterModule,
     SharedRoutingModule,
     TranslateModule.forChild()
@@ -21,13 +25,17 @@ import { NumberSpinnerComponent } from './components/number-spinner/number-spinn
   declarations: [
     ModalComponent,
     OffcanvasBootomComponent,
-    NumberSpinnerComponent],
+    NumberSpinnerComponent,
+    DataTableComponent,
+    CellDataLabelComponent],
   exports: [
     TranslateModule,
     NotifierModule,
     ModalComponent,
     OffcanvasBootomComponent,
-    NumberSpinnerComponent
+    NumberSpinnerComponent,
+    DataTableComponent,
+    CellDataLabelComponent
   ]
 
 })

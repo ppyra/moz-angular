@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InvoiceProductItemComponent } from './invoice-product-item.component';
+import { CellDataLabelComponent } from './cell-data-label.component';
 
-describe('InvoiceProductItemComponent', () => {
-  let component: InvoiceProductItemComponent;
-  let fixture: ComponentFixture<InvoiceProductItemComponent>;
+describe('CellDataLabelComponent', () => {
+  let component: CellDataLabelComponent;
+  let fixture: ComponentFixture<CellDataLabelComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InvoiceProductItemComponent ]
+      declarations: [ CellDataLabelComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InvoiceProductItemComponent);
+    fixture = TestBed.createComponent(CellDataLabelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

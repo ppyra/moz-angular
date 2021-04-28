@@ -4,7 +4,7 @@
     </div>
     <div class="col-10">
         <div class="row align-items-center m-2">
-            <div class="col-6" style="width: 55%;">
+            <div class="col-7">
                 <div class="flex-column">
                     <label class="fw-bolder" id="name">Philips 70PUS6704/12</label>
                     <div class="row gx-1">
@@ -18,30 +18,13 @@
                 </div>
             </div>
 
-            <div class="col-1">
-                <div class="d-flex flex-column">
-                    <label>1</label>
-                    <label class="fs-placeholder text-secondary">{{ "product.count" | translate }}</label>
-                </div>
-            </div>
-            <div class="col-1" style="width: 9.5%;">
-                <div class="d-flex flex-column">
-                    <label>2 999,00 zł</label>
-                    <label class="fs-placeholder text-secondary">{{ "product.price" | translate }}</label>
-
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="d-flex flex-column">
-                    <label>do opłacenia</label>
-                    <label class="fs-placeholder text-secondary">{{ "product.status" | translate }}</label>
-                </div>
-            </div>
+            <cell-data-label class="col-1" value="1" label="{{ 'product.count' | translate }}"></cell-data-label>
+            <cell-data-label class="col-1" value="2 990,00 zł" label="{{ 'product.price' | translate }}"></cell-data-label>
+            <cell-data-label class="col-1" value="do opłacenia" label="{{ 'product.status' | translate }}"></cell-data-label>
         </div>
 
-
         <div class="row align-items-center m-2">
-            <div class="col-7" style="width: 63.3%;">
+            <div class="col-8">
                 <div class="d-flex flex-column">
                     <label class="text-secondary fs-list-item">{{ "product.catalog_price" | translate}}</label>
                     <label class="text-secondary fs-list-item" id="name">Minus 1 000 zł na zakup trzech telewizorów marki Philips</label>
@@ -50,12 +33,10 @@
 
             <div class="col-3">
                 <div class="d-flex flex-column">
-
                     <label class="text-secondary">3 999,00 zł</label>
                     <label class="text-secondary" id="name">-333,33 zł</label>
                 </div>
             </div>
         </div>
     </div>
-
 </div>

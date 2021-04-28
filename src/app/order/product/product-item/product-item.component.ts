@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntil } from 'rxjs/operators';
 import { OrderPart } from 'src/app/common/components/offcanvas-bootom/component.model';
 import { TranslateService } from '@ngx-translate/core';
+import { ProductItemModel } from './product-item.model';
 
 @Component({
   selector: 'product-item',
@@ -13,6 +14,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class ProductItemComponent implements OnInit, OnDestroy {
 
+  @Input() productItemModel: ProductItemModel;
   @Input() orderPart: string;
   OrderPart = OrderPart;
   showDiscountButton: boolean = true;
@@ -28,6 +30,7 @@ export class ProductItemComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.priceLabel = this.translate.instant('product.price');
+    console.log('ProductItemComponent', this.productItemModel);
     // this.route
     //   .data
     //   .pipe(takeUntil(this.ngUnsubscribe))
@@ -41,31 +44,31 @@ export class ProductItemComponent implements OnInit, OnDestroy {
     //       }
 
     //     });
-    switch (this.orderPart) {
-      case OrderPart.INSURANCE:
-        this.showDiscountButton = false;
-        this.showDetailsButton = false;
-        this.showPieces = true;
-        this.imgDescCol = 'col-6'
-        this.imgWidth = 100;
-        this.priceLabel = this.translate.instant('product.sum');
-        break;
-      case OrderPart.CREATE_INVOICE:
-        this.showDiscountButton = false;
-        this.showDetailsButton = false;
-        this.showPieces = false;
-        this.imgDescCol = 'col-4';
-        this.priceLabel = this.translate.instant('product.sum');
-        break;
-      case OrderPart.ORDER_DETAILS:
-        this.showDiscountButton = false;
-        this.showDetailsButton = false;
-        this.showPieces = true;
-        this.imgDescCol = 'col-7';
-        this.priceLabel = this.translate.instant('product.price');
-        break;
+    // switch (this.orderPart) {
+    //   case OrderPart.INSURANCE:
+    //     this.showDiscountButton = false;
+    //     this.showDetailsButton = false;
+    //     this.showPieces = true;
+    //     this.imgDescCol = 'col-6'
+    //     this.imgWidth = 100;
+    //     this.priceLabel = this.translate.instant('product.sum');
+    //     break;
+    //   case OrderPart.CREATE_INVOICE:
+    //     this.showDiscountButton = false;
+    //     this.showDetailsButton = false;
+    //     this.showPieces = false;
+    //     this.imgDescCol = 'col-4';
+    //     this.priceLabel = this.translate.instant('product.sum');
+    //     break;
+    //   case OrderPart.ORDER_DETAILS:
+    //     this.showDiscountButton = false;
+    //     this.showDetailsButton = false;
+    //     this.showPieces = true;
+    //     this.imgDescCol = 'col-7';
+    //     this.priceLabel = this.translate.instant('product.price');
+    //     break;
 
-    }
+    // }
   }
 
   showDetails() {

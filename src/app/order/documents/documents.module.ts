@@ -7,7 +7,6 @@ import { CreateInvoiceDataClitentComponent } from "./create_invoice/create-invoi
 import { CreateInvoiceProductsComponent } from "./create_invoice/create-invoice-products/create-invoice-products.component";
 import { InvoiceComponent } from "./create_invoice/invoice/invoice.component";
 import { DocumentsComponent } from "./documents.component";
-import { InvoiceProductItemComponent } from './create_invoice/invoice/invoice-product-item/invoice-product-item.component';
 import { CarouselClientDataComponent } from './create_invoice/carousel-client-data/carousel-client-data.component';
 import { ClientAddressCardComponent } from './create_invoice/carousel-client-data/client-address-card/client-address-card.component';
 import { SharedModule } from "src/app/common/common.module";
@@ -22,14 +21,11 @@ import { NumberSpinnerComponent } from "src/app/common/components/number-spinner
     CreateInvoiceProductsComponent,
     InvoiceComponent,
     DocumentsComponent,
-    InvoiceProductItemComponent,
     CarouselClientDataComponent,
-    ClientAddressCardComponent,
-    //NumberSpinnerComponent
+    ClientAddressCardComponent
   ],
   imports: [
       CommonModule,
-      //NumberSpinnerComponent,
       FormsModule,
       RouterModule,
       SharedModule,
