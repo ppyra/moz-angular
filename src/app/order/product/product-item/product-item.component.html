@@ -1,49 +1,6 @@
-<!-- <div class="d-flex flex-row align-items-center">
-    <ng-content select="[select-item]"></ng-content>
-    <div [class]="imgDescCol">
-        <photo-description [imgWidth]="imgWidth"></photo-description>
-    </div>
-
-    <div class="d-flex flex-row justify-content-center align-items-center w-100">
-        <div *ngIf="showDiscountButton" class="col-2">
-            <a href="#" class="btn btn-outline-secondary btn-light btn-sm rounded-pill text-uppercase"><i class="bi bi-check-circle"></i> {{ "product.discount" | translate}}</a>
-        </div>
-        <div *ngIf="showPieces" class="d-flex flex-column col-2">
-            <label for="count" class="control-label fs-5">3</label>
-            <label class="control-label text-secondary" id="count">{{ "product.count" | translate}}</label>
-        </div>
-        <ng-content select="[numberSpinner]"></ng-content>
-        <div class="d-flex flex-column col-2">
-            <label for="sum" class="control-label fs-5">11 456,00zł</label>
-            <label class="control-label text-secondary" id="sum">{{ "product.sum" | translate}}</label>
-        </div>
-        <div class="d-flex flex-column" [class]="showDetailsButton ? 'col-2' : 'col-4'">
-            <label for="status" class="control-label fs-5">w trakcie</label>
-            <label class="control-label text-secondary" id="status">{{ "product.status" | translate}}</label>
-        </div>
-        <div *ngIf="showDetailsButton" class="d-flex flex-column col-2">
-            <button class="btn btn-outline-secondary btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWrapper" (click)="showDetails()">{{ "product.details" | translate }}</button>
-        </div>
-    </div>
-</div> -->
-
-<!-- <div class="row align-items-center">
-    <ng-content select="[select-item]"></ng-content>
-    <photo-description [class]="imgDescCol" [imgWidth]="imgWidth"></photo-description>
-    <div *ngIf="showDiscountButton" class="col-2">
-        <a href="#" class="btn btn-outline-secondary btn-light btn-sm rounded-pill text-uppercase"><i class="bi bi-check-circle"></i> {{ "product.discount" | translate}}</a>
-    </div>
-    <cell-data-label class="col-1" value="3" label="{{ 'product.count' | translate}}"></cell-data-label>
-    <ng-content select="[numberSpinner]"></ng-content>
-    <cell-data-label class="col-2" value="3" label="{{ 'product.sum' | translate}}"></cell-data-label>
-    <cell-data-label class="col-2" value="w trakcie" label="{{ 'product.status' | translate}}"></cell-data-label>
-    <div *ngIf="showDetailsButton" class="col-2">
-        <button class="btn btn-outline-secondary btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWrapper" (click)="showDetails()">{{ "product.details" | translate }}</button>
-    </div>
-</div> -->
 <div class="row align-items-center">
     <ng-content select="[select-item]"></ng-content>
-    <photo-description [class]="productItemModel.imgDescCol.colSize" [imageDescriptionProduct]="productItemModel.imgDescCol" [imgWidth]="imgWidth"></photo-description>
+    <photo-description [class]="productItemModel.imgDescCol.colSize" [imageDescriptionProduct]="productItemModel.imgDescCol" [imgWidth]="100"></photo-description>
     <div *ngIf="productItemModel.showDiscountButton" class="col-2">
         <a href="#" class="btn btn-outline-secondary btn-light btn-sm rounded-pill text-uppercase"><i class="bi bi-check-circle"></i> {{ "product.discount" | translate}}</a>
     </div>

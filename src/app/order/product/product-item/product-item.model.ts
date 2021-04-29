@@ -1,7 +1,6 @@
 export class ProductItemModel {
   imgDescCol: ImageDescriptionProduct;
   cellLabelValue: Array<CellLabelValue>;
-  //showPieces: boolean;
   showDiscountButton: boolean;
   showDetailsButton: boolean;
 
@@ -25,8 +24,8 @@ export class ImageDescriptionProduct {
 export class CellLabelValue {
   value: string;
   label: string;
-  colSize: string;
-  constructor(value: string, label: string, colSize: string) {
+  colSize?: string;
+  constructor(value: string, label: string, colSize?: string) {
     this.value = value;
     this.label = label;
     this.colSize = colSize;

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { OrderPart } from 'src/app/common/components/offcanvas-bootom/component.model';
-import { ComponentModelService } from 'src/app/common/components/offcanvas-bootom/component.model.service';
 import { ProductItemModel, ImageDescriptionProduct, CellLabelValue } from '../product/product-item/product-item.model';
 
 @Component({

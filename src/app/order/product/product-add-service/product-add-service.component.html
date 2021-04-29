@@ -1,0 +1,23 @@
+<div class="row align-items-center">
+    <div class="col-7">
+        <div class="row align-items-center">
+            <div class="col-1 d-flex justify-content-center"><i class="bi bi-plus" style="font-size: 2rem; color: grey;"></i></div>
+            <div class="col-6">
+                <label class="fw-bolder fs-list-item" id="addServiceTitle">{{ productOrderService.title }}</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-2 me-3" *ngIf="productOrderService.showWarrantyBtn">
+        <button type="button" id="btnWarranty" class="btn btn-outline-primary btn-light btn-sm rounded-pill"><i class="bi bi-check-circle"></i> {{ "product.warranty" | translate }}</button>
+    </div>
+    <div class="col-2 me-3" *ngIf="productOrderService.showServiceBtn">
+        <button type="button" id="btnService" class="btn btn-outline-primary btn-light btn-sm rounded-pill"><i class="bi bi-check-circle"></i> {{ "product.service" | translate}}</button>
+    </div>
+
+    <cell-data-label class="col-1" *ngFor="let cell of productOrderService.cellLabelValue" style="max-width: 140px;" [value]="cell.value" [label]="cell.label"></cell-data-label>
+
+    <div class="col-1" *ngIf="productOrderService.showIgnoreBtn" style="max-width: 140px;">
+        <button type="button" id="btnIgnore" class="btn btn-outline-primary">{{ "ignore" | translate}}</button>
+    </div>
+</div>

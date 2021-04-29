@@ -32,7 +32,7 @@ export class NotifierComponent implements OnInit {
                 }
                 this.notifications.push(alert);
                 if (alert.autoClose) {
-                    setTimeout(() => this.removeNotification(alert), 5000);
+                    setTimeout(() => this.removeNotification(alert), 6000);
                 }
            });
 
@@ -66,12 +66,11 @@ export class NotifierComponent implements OnInit {
         if (!notifier) return;
 
         const classes = ['alert', 'alert-dismissable'];
-
         const alertTypeClass = {
-            [NotificationType.SUCCESS]: 'alert alert-success',
-            [NotificationType.ERROR]: 'alert alert-danger',
-            [NotificationType.INFO]: 'alert alert-info',
-            [NotificationType.WARN]: 'alert alert-warning'
+            [NotificationType.SUCCESS]: 'alert bg-success bg-gradient text-white',
+            [NotificationType.INFO]: 'alert bg-info bg-gradient text-body',
+            [NotificationType.WARN]: 'alert bg-warning bg-gradient text-body',
+            [NotificationType.ERROR]: 'alert bg-danger bg-gradient text-white'
         }
 
         classes.push(alertTypeClass[notifier.type]);
@@ -79,7 +78,21 @@ export class NotifierComponent implements OnInit {
         if (notifier.fade) {
             classes.push('fade');
         }
+        return classes.join(' ');
+    }
 
+    imgClass(notifier: Notification) {
+        if (!notifier) return;
+
+         const classes = ['bi'];
+        const alertTypeClass = {
+            [NotificationType.SUCCESS]: 'bi-check-circle',
+            [NotificationType.INFO]: 'bi-info-circle',
+            [NotificationType.WARN]: 'bi-exclamation-circle',
+            [NotificationType.ERROR]: 'bi-x-circle'
+        }
+
+        classes.push(alertTypeClass[notifier.type]);
         return classes.join(' ');
     }
 }

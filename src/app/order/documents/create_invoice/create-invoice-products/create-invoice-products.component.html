@@ -1,12 +1,10 @@
-<!-- <div class="offcanvas offcanvas-bottom rounded-3 m-1 h-75" tabindex="-1" id="createInvoiceProducts"> -->
-<!-- <div class=""> -->
 <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasBottomLabel">{{ "invoice.issue_of_an_invoice" | translate}}</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h5 class="offcanvas-title" id="createInvoiceTitle">{{ "invoice.issue_of_an_invoice" | translate}}</h5>
+    <button type="button" class="btn-close text-reset" id="btnClose" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
 <div class="offcanvas-body">
     <div class="d-flex flex-column">
-        <div class="alert alert-primary" role="alert">
+        <div class="alert alert-primary" role="alert" id="alertInfo">
             <h4 class="alert-heading">Wybierz z poniższej listy, dla których chcesz wystawić fakturę.</h4>
             <p>Po wybraniu produktów wypełnisz dane do faktury</p>
         </div>
@@ -17,47 +15,6 @@
                 <label class="fw-bolder ms-4" for="flexCheckChecked">{{ "invoice.select_all" | translate }}</label>
             </li>
             <li class="list-group-item border-0 border-bottom">
-                <!-- <div class="row align-items-center">
-                    <div class="col-1 d-flex align-items-center justify-content-between">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        </div>
-                        <img src="https://f01.esfr.pl/foto/4/66988569337/5efcf64af065e6405439db821118bb44/philips-70pus7805-smart-tv-uhd-ambilight-philips,66988569337_8.jpg" alt="..." class="img-thumbnail" style="width: 100px;">
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex flex-column">
-                            <label class="fw-bolder">{{ "invoice.issue_of_corrective" | translate}} {{ "no" | translate}} FKV/C4/00001</label>
-                            <div class="flex-row">
-                                <label class="fs-placeholder text-secondary">{{ "documents.document" | translate}}</label>
-                                <label class="fs-placeholder text-secondary ms-4">119404586</label>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-1">
-                        <div class="d-flex justify-content-around align-items-center">
-                            <button type="button" class="btn btn-outline-light btn-sm text-dark fs-3" style="width: 40px;">-</button>
-                            <label>1</label>
-                            <button type="button" class="btn btn-outline-light btn-sm text-dark fs-3" style="width: 40px;">+</button>
-                        </div>
-
-
-                    </div>
-
-                    <div class="col-2">
-                        <div class="d-flex flex-column">
-                            <label>3 458,00 zł</label>
-                            <label class="text-secondary fs-placeholder" id="name">{{ "product.sum" | translate}}</label>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="d-flex flex-column">
-                            <label>w trakcie</label>
-                            <label class="text-secondary fs-placeholder" id="name">{{ "product.status" | translate}}</label>
-                        </div>
-                    </div>
-                </div> -->
                 <product-item [productItemModel]="productItemOrder">
                     <div class="col-1" style="width: 45px;" select-item>
                         <div class="form-check">
@@ -70,45 +27,6 @@
                 </product-item>
             </li>
             <li class="list-group-item border-0 border-bottom">
-                <!-- <div class="row align-items-center">
-                    <div class="col-1 d-flex align-items-center justify-content-between">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        </div>
-                        <img src="https://f01.esfr.pl/foto/4/66988569337/5efcf64af065e6405439db821118bb44/philips-70pus7805-smart-tv-uhd-ambilight-philips,66988569337_8.jpg" alt="..." class="img-thumbnail" style="width: 100px;">
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex flex-column">
-                            <label class="fw-bolder">{{ "invoice.issue_of_corrective" | translate}} {{ "no" | translate}} FKV/C4/00001</label>
-                            <div class="flex-row">
-                                <label class="fs-placeholder text-secondary">{{ "documents.document" | translate}}</label>
-                                <label class="fs-placeholder text-secondary ms-4">119404586</label>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-1">
-                        <div class="d-flex justify-content-around align-items-center">
-                            <button type="button" class="btn btn-outline-light btn-sm text-dark fs-3" style="width: 40px;">-</button>
-                            <label>2</label>
-                            <button type="button" class="btn btn-outline-light btn-sm text-dark fs-3" style="width: 40px;">+</button>
-                        </div>
-                    </div>
-
-                    <div class="col-2">
-                        <div class="d-flex flex-column">
-                            <label>3 458,00 zł</label>
-                            <label class="text-secondary fs-placeholder" id="name">{{ "product.sum" | translate}}</label>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="d-flex flex-column">
-                            <label>w trakcie</label>
-                            <label class="text-secondary fs-placeholder" id="name">{{ "product.status" | translate}}</label>
-                        </div>
-                    </div>
-                </div> -->
                 <product-item [productItemModel]="productItemOrder">
                     <div class="col-1" style="width: 45px;" select-item>
                         <div class="form-check">
@@ -121,8 +39,6 @@
                 </product-item>
             </li>
         </ul>
-        <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-25 mx-auto" type="button" (click)="confirm()">{{ "invoice.confirm" | translate}}</button>
+        <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-25 mx-auto" id="btnConfirm" type="button" (click)="confirm()">{{ "invoice.confirm" | translate}}</button>
     </div>
 </div>
-<!-- </div> -->
-<!-- </div> -->

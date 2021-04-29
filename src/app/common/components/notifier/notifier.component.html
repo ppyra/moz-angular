@@ -1,9 +1,9 @@
 <div class="container">
-    <div *ngFor="let notification of notifications" class="{{cssClass(notification)}}">
+    <div *ngFor="let notification of notifications" id="alert" class="{{cssClass(notification)}}">
         <div class="d-flex justify-content-between">
-            <h4 class="alert-heading">{{ notification.title }}</h4>
-            <button type="button" class="btn-close " data-dismiss="alert" (click)="removeNotification(notification)"></button>
+            <h4 class="alert-heading" id="alertHeader"><i [class]="imgClass(notification)"></i> {{ notification.title }}</h4>
+            <button type="button" class="btn-close" id="btnClose" data-dismiss="alert" (click)="removeNotification(notification)"></button>
         </div>
-        <p>{{ notification.message }}</p>
+        <p id="messageText">{{ notification.message }}</p>
     </div>
 </div>

@@ -14,7 +14,7 @@
         "buyer": "Nabywca",
         "issue_an_invoice": "Wystaw fakture",
         "settlement_of_accounts": "Rozlicz należność",
-        "add_guarantee": "Dodaj gwarancję",
+        "add_warranty": "Dodaj gwarancję",
         "see_documents": "Zobacz dokumenty",
         "in_progress": "W realizacji"
     },
@@ -25,14 +25,14 @@
         "details": "Szczegóły",
         "price": "Cena",
         "catalog_price": "Cena kartalogowa",
-        "guarantee": "Gwarancja",
+        "warranty": "Gwarancja",
         "service": "Usługa",
         "discount": "Rabat"
     },
     "summary": {
         "title": "Podsumowanie",
         "value_products_in_basket": "Wartość towarów w koszyku",
-        "value_guarantee_in_basket": "Wartość gwarancji w koszyku",
+        "value_warranty_in_basket": "Wartość gwarancji w koszyku",
         "value_services_in_basket": "Wartość usług w koszyku",
         "discount_codes_charged": "Naliczone kody rabatowe",
         "discount_charged": "Naliczone przeceny"

@@ -11,6 +11,7 @@ import { OffcanvasBootomComponent } from './components/offcanvas-bootom/offcanva
 import { NumberSpinnerComponent } from './components/number-spinner/number-spinner.component';
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { CellDataLabelComponent } from './components/cell-data-label/cell-data-label.component';
+import { RowDataLabelComponent } from './components/row-data-label/row-data-label.component';
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import { CellDataLabelComponent } from './components/cell-data-label/cell-data-l
     OffcanvasBootomComponent,
     NumberSpinnerComponent,
     DataTableComponent,
+    RowDataLabelComponent,
     CellDataLabelComponent],
   exports: [
     TranslateModule,
@@ -35,7 +37,8 @@ import { CellDataLabelComponent } from './components/cell-data-label/cell-data-l
     OffcanvasBootomComponent,
     NumberSpinnerComponent,
     DataTableComponent,
-    CellDataLabelComponent
+    CellDataLabelComponent,
+    RowDataLabelComponent
   ]
 
 })
