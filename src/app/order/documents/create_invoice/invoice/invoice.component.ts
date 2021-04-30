@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { CellLabelValue, ImageDescriptionProduct, ProductItemModel } from 'src/app/order/product/product-item/product-item.model';
 
@@ -9,7 +10,9 @@ import { CellLabelValue, ImageDescriptionProduct, ProductItemModel } from 'src/a
 })
 export class InvoiceComponent implements OnInit {
   productItemOrder: ProductItemModel;
-  constructor(private translate: TranslateService) { }
+  constructor(private translate: TranslateService,
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.productItemOrder = new ProductItemModel();
@@ -25,4 +28,7 @@ export class InvoiceComponent implements OnInit {
     ];
   }
 
+  close() {
+    this.router.navigate(['/']);
+  }
 }

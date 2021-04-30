@@ -28,4 +28,8 @@ export class CreateInvoiceProductsComponent implements OnInit {
     this.router.navigate([{outlets: {canvasOutlet: ['create-invoice-client-data']}}], { relativeTo: this.route.parent })
   }
 
+  close() {
+    this.router.navigate(['/']);
+  }
+
 }

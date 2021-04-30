@@ -4,7 +4,7 @@
     <h5 class="offcanvas-title" id="offcanvasBottomLabel">{{ "invoice.issue_of_an_invoice" | translate}} <span class="text-secondary">{{ "invoice.selected_elements" | translate}}: 5</span>
         <button class="btn btn-outline-primary rounded-pill text-uppercase fw-bold ms-4" type="button">+ {{ "invoice.new_invoice_details" | translate}}</button>
     </h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" (click)="close()"></button>
 </div>
 <div class="offcanvas-body">
     <div class="d-flex flex-column">

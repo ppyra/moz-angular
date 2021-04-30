@@ -1,7 +1,9 @@
 <div class="row align-items-center">
     <div class="col-7">
         <div class="row align-items-center">
-            <div class="col-1 d-flex justify-content-center"><i class="bi bi-plus" style="font-size: 2rem; color: grey;"></i></div>
+            <div class="col-1 d-flex justify-content-center">
+                <i class="bi bi-plus" style="font-size: 2rem; color: grey;"></i>
+            </div>
             <div class="col-6">
                 <label class="fw-bolder fs-list-item" id="addServiceTitle">{{ productOrderService.title }}</label>
             </div>
@@ -11,7 +13,7 @@
     <div class="col-2 me-3" *ngIf="productOrderService.showWarrantyBtn">
         <button type="button" id="btnWarranty" class="btn btn-outline-primary btn-light btn-sm rounded-pill"><i class="bi bi-check-circle"></i> {{ "product.warranty" | translate }}</button>
     </div>
-    <div class="col-2 me-3" *ngIf="productOrderService.showServiceBtn">
+    <div class="col-2 me-3" *ngIf="productOrderService.serviceBtn.show" [class]="productOrderService.serviceBtn.position">
         <button type="button" id="btnService" class="btn btn-outline-primary btn-light btn-sm rounded-pill"><i class="bi bi-check-circle"></i> {{ "product.service" | translate}}</button>
     </div>
 

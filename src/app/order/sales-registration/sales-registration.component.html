@@ -1,13 +1,14 @@
 <div class="bg-light">
 
     <div class="m-4">
-        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+        <!-- <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
             <ol class="breadcrumb fs-6 fw-bold text-uppercase">
                 <li class="breadcrumb-item active"><a href="#">{{ 'ekatalog' | translate }}</a></li>
                 <li class="breadcrumb-item" aria-current="page">{{ 'moz' | translate }}</li>
                 <li class="breadcrumb-item active"><a href="#">{{ 'order_details' | translate}}</a></li>
             </ol>
-        </nav>
+        </nav> -->
+        <breadcrumb></breadcrumb>
 
         <p class="d-inline fs-4 fw-bold text-center">{{ "order.order_nr" | translate}} 123 456 789
             <span type="button" class="d-inline btn btn-warning btn-sm rounded-pill text-white text-uppercase m-3 btn-sm-header">{{ "order.in_progress" | translate}}</span>

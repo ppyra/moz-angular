@@ -17,6 +17,9 @@ export class CreateInvoiceDataClitentComponent implements OnInit {
     this.router.navigate([{outlets: {canvasOutlet: ['order-details']}}], { relativeTo: this.route.parent })
   }
   searchCustomer(){
+  }
 
+  close() {
+    this.router.navigate(['/']);
   }
 }

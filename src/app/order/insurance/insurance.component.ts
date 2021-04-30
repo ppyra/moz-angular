@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ProductItemModel, ImageDescriptionProduct, CellLabelValue } from '../product/product-item/product-item.model';
 
@@ -10,7 +11,9 @@ import { ProductItemModel, ImageDescriptionProduct, CellLabelValue } from '../pr
 export class InsuranceComponent implements OnInit {
 
   productItemOrder: ProductItemModel;
-  constructor(private translate: TranslateService) { }
+  constructor(private translate: TranslateService,
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.productItemOrder = new ProductItemModel();
@@ -27,5 +30,8 @@ export class InsuranceComponent implements OnInit {
 
   confirm(){
     console.log("potwierdzam dodanie ubezpieczenia dla wybranych produktów");
+  }
+  close() {
+    this.router.navigate(['/']);
   }
 }

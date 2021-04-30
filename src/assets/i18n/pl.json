@@ -27,14 +27,18 @@
         "catalog_price": "Cena kartalogowa",
         "warranty": "Gwarancja",
         "service": "Usługa",
-        "discount": "Rabat"
+        "discount": "Rabat",
+        "order_list": "Lista produktów zamówienia"
     },
     "summary": {
         "title": "Podsumowanie",
         "value_products_in_basket": "Wartość towarów w koszyku",
+        "value_products": "Wartość towarów",
         "value_warranty_in_basket": "Wartość gwarancji w koszyku",
+        "value_warranty": "Wartość gwarancji",
         "value_services_in_basket": "Wartość usług w koszyku",
         "discount_codes_charged": "Naliczone kody rabatowe",
+        "discounts_charged": "Naliczone rabaty",
         "discount_charged": "Naliczone przeceny"
     },
     "pay": {
@@ -67,6 +71,7 @@
         "confirmed": "Potwierdzone",
         "corrective": "Korygująca",
         "issue_of_an_invoice": "Wystawianie faktury",
+        "issue_of_an_invoice_data": "Wystawianie faktury dane klienta",
         "select_all": "Zaznacz wszystkie",
         "confirm": "Potwierdzam",
         "issue_of_corrective": "Faktura korygująca",
@@ -79,6 +84,7 @@
     },
     "notification": {
         "login_with_valid_credentials": "Zaloguj się używając ważnych danych logowania",
+        "login": "Logowanie",
         "password_expired_info": "Twoje hasło wygasło",
         "access_denied": "Odmowa dostępu",
         "404_not_found": "404 - Nie znaleziono",
@@ -92,6 +98,7 @@
         "request_timeout": "Upłynął czas oczekiwania na odpowiedź"
     },
     "insurance": {
+        "title": "Ubezpieczenie",
         "add_insurance": "Dodawanie ubezpieczenia"
     }
 }

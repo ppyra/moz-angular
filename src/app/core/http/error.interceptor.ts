@@ -24,7 +24,7 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
                 switch (err.status) {
                     case 0:
                         // server-down-message
-                        this.notifier.warning(this.translate.instant('notification.server-down-message'), this.translate.instant('notification.server-down'));
+                        this.notifier.warning(this.translate.instant('notification.server_down_message'), this.translate.instant('notification.server_down'));
                         break;
                     case 200:
 
@@ -45,31 +45,31 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
                     case 401:
                         // login-with-valid-credentials
                         if (businessException === 'DisabledAccount') {
-                          this.notifier.warning(this.translate.instant('notification.blocked-account-info'),
-                              this.translate.instant('notification.blocked-account'));
+                          this.notifier.warning(this.translate.instant('notification.blocked_account_info'),
+                              this.translate.instant('notification.blocked_account'));
                       } else {
-                          this.notifier.warning(this.translate.instant('notification.login-with-valid-credentials'));
+                          this.notifier.warning(this.translate.instant('notification.login_with_valid_credentials'));
                       }
                         break;
                     case 403:
                         // MissingPermission, access-denied
                         if (businessException === 'PasswordExpired') {
-                          this.notifier.warning(this.translate.instant('notification.password-expired-info'));
+                          this.notifier.warning(this.translate.instant('notification.password_expired_info'));
                       } else if (businessException === 'MissingPermission') {
-                          this.notifier.warning(this.translate.instant('notification.access-denied'), err.headers.get('Permission'));
+                          this.notifier.warning(this.translate.instant('notification.access_denied'), err.headers.get('Permission'));
                       }
                         break;
                     case 404:
                         // 404-not-found
-                        this.notifier.warning(err.url, this.translate.instant('notification.404-not-found'));
+                        this.notifier.warning(err.url, this.translate.instant('notification.404_not_found'));
                         break;
                     case 408:
                         // request-timeout
-                        this.notifier.warning(this.translate.instant('notification.login-session-expired'));
+                        this.notifier.warning(this.translate.instant('notification.login_session_expired'));
                     break;
                     case 419:
                         // login-session-expired
-                        this.notifier.warning(this.translate.instant('notification.login-session-expired'), this.translate.instant('notification.unauthorized'));
+                        this.notifier.warning(this.translate.instant('notification.login_session_expired'), this.translate.instant('notification.unauthorized'));
                         break;
                     case 502:
                         // login-session-expired

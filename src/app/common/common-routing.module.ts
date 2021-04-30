@@ -16,40 +16,58 @@ export const CanvasRoutes: Routes = [
     {
       path: 'documents',
       outlet: "canvasOutlet",
-      component: DocumentsComponent
+      component: DocumentsComponent,
+      data: {
+        breadcrumb: 'documents.title',
+      }
     },
     {
       path: 'invoice',
       outlet: "canvasOutlet",
-      component: InvoiceComponent
+      component: InvoiceComponent,
+      data: {
+        breadcrumb: 'invoice.title',
+      }
     },
     {
       path: 'create-invoice',
       outlet: "canvasOutlet",
       component: CreateInvoiceProductsComponent,
-      data : {showDiscountButton: false, showDetailsButton: false, showPieces: false }
+      data: {
+        breadcrumb: 'invoice.issue_of_an_invoice',
+     }
     },
     {
       path: 'create-invoice-client-data',
       outlet: "canvasOutlet",
-      component: CreateInvoiceDataClitentComponent
+      component: CreateInvoiceDataClitentComponent,
+      data: {
+        breadcrumb: 'invoice.issue_of_an_invoice_data',
+      }
     },
     {
       path: 'order-details',
       outlet: "canvasOutlet",
       component: OrderDetailsComponent,
-      data : {showDiscountButton: false, showDetailsButton: false, showPieces: true}
+      data: {
+        breadcrumb: 'order_details',
+      }
     },
     {
       path: 'product-order-list',
       outlet: "canvasOutlet",
-      component: ProductOrderListComponent
+      component: ProductOrderListComponent,
+      data: {
+        breadcrumb: 'product.order_list',
+      }
     },
     {
       path: 'insurance',
       outlet: "canvasOutlet",
       component: InsuranceComponent,
-      data : {showDiscountButton: false, showDetailsButton: false }
+      data: {
+        breadcrumb: 'insurance.title',
+      }
     },
     {
       path: '',

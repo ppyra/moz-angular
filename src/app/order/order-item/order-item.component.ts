@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { NotifierService } from 'src/app/common/services/notifier.service';
 @Component({
   selector: 'order-item',
@@ -8,7 +9,10 @@ import { NotifierService } from 'src/app/common/services/notifier.service';
 })
 export class OrderItemComponent implements OnInit {
 
-  constructor(protected notifierService: NotifierService, private route: ActivatedRoute, private router: Router) { }
+  constructor(protected notifierService: NotifierService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private translate: TranslateService) { }
 
   ngOnInit(): void {
   }
@@ -18,10 +22,10 @@ export class OrderItemComponent implements OnInit {
   }
 
   showNotifier() {
-    this.notifierService.error("some alert", 'title', true);
-    this.notifierService.info("some alert", 'title', true);
-    this.notifierService.success("some alert", 'title', true);
-    this.notifierService.warning("some alert", 'title', true);
+    this.notifierService.warning(this.translate.instant('notification.login_with_valid_credentials'), this.translate.instant('notification.login'), true);
+    this.notifierService.error(this.translate.instant('notification.login_session_expired'), this.translate.instant('notification.unauthorized'), true);
+    this.notifierService.info(this.translate.instant('notification.password_expired_info'), this.translate.instant('notification.login'), true);
+    this.notifierService.success(this.translate.instant('notification.server_down_message'), this.translate.instant('notification.server_down'), true);
   }
 
   addWarranty() {

@@ -3,7 +3,7 @@
         <button type="button" class="btn btn-outline-success btn-sm btn-sm-header fw-bolder border-2 rounded-pill text-uppercase ms-3"><i class="bi bi-check-circle"></i> {{ "invoice.confirmed" | translate}}</button>
         <button type="button" class="btn btn-outline-primary btn-sm btn-sm-header fw-bolder border-2 rounded-pill text-uppercase ms-3">{{ "invoice.corrective" | translate}}</button>
     </h5>
-    <button type="button" class="btn-close text-reset align-top" style="font-size: 1rem;" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close text-reset align-top" style="font-size: 1rem;" data-bs-dismiss="offcanvas" aria-label="Close" (click)="close()"></button>
 </div>
 <div class="offcanvas-body">
     <div class="row align-items-center">
