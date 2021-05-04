@@ -1,12 +1,11 @@
 import { CellLabelValue } from "../product-item/product-item.model";
 
-export class ProductOrderService {
+export interface ProductOrderService {
     title: string;
     showWarrantyBtn: boolean;
     serviceBtn: ServiceButton;
     showIgnoreBtn: boolean;
     cellLabelValue: Array<CellLabelValue>;
-    constructor() {}
 }
 
 export interface ServiceButton {

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ProductOrderService } from '../product-add-service/product-add-service.model';
-import { CellLabelValue } from '../product-item/product-item.model';
 
 @Component({
   selector: 'product-order-list',
@@ -23,28 +22,31 @@ export class ProductOrderListComponent implements OnInit {
   }
 
   getExtendWarranty(): ProductOrderService {
-    this.productOrderService = new ProductOrderService();
-    this.productOrderService.showIgnoreBtn = true;
-    this.productOrderService.serviceBtn = { show: false, position: 'order-1'};
-    this.productOrderService.showWarrantyBtn = true;
-    this.productOrderService.title = 'Przedłuż Gwarancję® wariant PODSTAWOWY - 5 lat';
-    this.productOrderService.cellLabelValue = [
-      new CellLabelValue('380,00 zł', this.translate.instant('product.price')),
-      new CellLabelValue('do opłacenia', this.translate.instant('product.status')),
-    ];
+    this.productOrderService = {
+      showIgnoreBtn: true,
+    serviceBtn: { show: false, position: 'order-1'},
+    showWarrantyBtn: true,
+    title: 'Przedłuż Gwarancję® wariant PODSTAWOWY - 5 lat',
+    cellLabelValue: [
+      { value: '380,00 zł', label: this.translate.instant('product.price')},
+      { value: 'do opłacenia', label: this.translate.instant('product.status')}
+    ]
+  }
     return this.productOrderService;
   }
 
   getSocketMax(): ProductOrderService {
-    this.productOrderService = new ProductOrderService();
-    this.productOrderService.showIgnoreBtn = false;
-    this.productOrderService.serviceBtn = { show: true, position: ''};
-    this.productOrderService.showWarrantyBtn = false;
-    this.productOrderService.title = 'Pakiet MAX - wniesienie, przykręcenie podstawy, podłączenie, uruchomienie, wyszukanie kanałów cyfrowych';
-    this.productOrderService.cellLabelValue = [
-      new CellLabelValue('79,00 zł', this.translate.instant('product.price')),
-      new CellLabelValue('w trakcie', this.translate.instant('product.status')),
-    ];
+    this.productOrderService= {
+    showIgnoreBtn: false,
+    serviceBtn: { show: true, position: ''},
+    showWarrantyBtn: false,
+    title: 'Pakiet MAX - wniesienie, przykręcenie podstawy, podłączenie, uruchomienie, wyszukanie kanałów cyfrowych',
+    cellLabelValue: [
+      { value: '79,00 zł', label: this.translate.instant('product.price')},
+      { value: 'w trakcie', label: this.translate.instant('product.status')}
+    ]
+  }
+
     return this.productOrderService;
   }
 }

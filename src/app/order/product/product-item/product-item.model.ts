@@ -1,33 +1,19 @@
-export class ProductItemModel {
+export interface ProductItemModel {
   imgDescCol: ImageDescriptionProduct;
   cellLabelValue: Array<CellLabelValue>;
   showDiscountButton: boolean;
   showDetailsButton: boolean;
-
-  constructor() { }
 }
 
-export class ImageDescriptionProduct {
+export interface ImageDescriptionProduct {
   srcImg?: string;
   model: string;
   type: string;
   serialNo: string;
   colSize: string;
-  constructor(model: string, type: string, serialNo: string, colSize: string, srcImg?: string) {
-    this.model = model;
-    this.type = type;
-    this.serialNo = serialNo;
-    this.colSize = colSize;
-    this.srcImg = srcImg;
-  }
 }
-export class CellLabelValue {
+export interface CellLabelValue {
   value: string;
   label: string;
   colSize?: string;
-  constructor(value: string, label: string, colSize?: string) {
-    this.value = value;
-    this.label = label;
-    this.colSize = colSize;
-  }
 }
