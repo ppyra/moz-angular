@@ -23,13 +23,13 @@ export class ProductOrderListComponent implements OnInit {
 
   getExtendWarranty(): ProductOrderService {
     this.productOrderService = {
-      showIgnoreBtn: true,
-    serviceBtn: { show: false, position: 'order-1'},
-    showWarrantyBtn: true,
-    title: 'Przedłuż Gwarancję® wariant PODSTAWOWY - 5 lat',
+    showIgnoreBtn: true,
+    serviceBtn: { show: false, position: '1'},
+    warrantyBtn: { show: true, position: '4'},
+    title: { text: 'Przedłuż Gwarancję® wariant PODSTAWOWY - 5 lat',  colSize: 'col-7'},
     cellLabelValue: [
-      { value: '380,00 zł', label: this.translate.instant('product.price')},
-      { value: 'do opłacenia', label: this.translate.instant('product.status')}
+      { value: '380,00 zł', label: this.translate.instant('product.price'), colSize: 'col-1'},
+      { value: 'do opłacenia', label: this.translate.instant('product.status'), colSize: 'col-1'}
     ]
   }
     return this.productOrderService;
@@ -38,15 +38,15 @@ export class ProductOrderListComponent implements OnInit {
   getSocketMax(): ProductOrderService {
     this.productOrderService= {
     showIgnoreBtn: false,
-    serviceBtn: { show: true, position: ''},
-    showWarrantyBtn: false,
-    title: 'Pakiet MAX - wniesienie, przykręcenie podstawy, podłączenie, uruchomienie, wyszukanie kanałów cyfrowych',
+    serviceBtn: { show: true, position: '4', class: 'col-2'},
+    discountBtn: { show: false},
+    warrantyBtn: { show: false},
+    title: { text: 'Pakiet MAX - wniesienie, przykręcenie podstawy, podłączenie, uruchomienie, wyszukanie kanałów cyfrowych', colSize: 'col-7'},
     cellLabelValue: [
-      { value: '79,00 zł', label: this.translate.instant('product.price')},
-      { value: 'w trakcie', label: this.translate.instant('product.status')}
+      { value: '79,00 zł', label: this.translate.instant('product.price'), colSize: 'col-1'},
+      { value: 'w trakcie', label: this.translate.instant('product.status'), colSize: 'col-1'}
     ]
   }
-
     return this.productOrderService;
   }
 }

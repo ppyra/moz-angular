@@ -1,25 +1,39 @@
 <div class="row align-items-center">
-    <div class="col-7">
-        <div class="row align-items-center">
-            <div class="col-1 d-flex justify-content-center">
-                <i class="bi bi-plus" style="font-size: 2rem; color: grey;"></i>
+    <div [class]="productOrderService.title.colSize">
+        <div class="row align-items-center w-100">
+            <div class="col-2 d-flex justify-content-center">
+                <div *ngIf="productOrderService.discountBtn?.show && productOrderService.discountBtn.position === '1'; then btnDiscountTemplate"></div>
+                <div *ngIf="productOrderService.warrantyBtn?.show && productOrderService.warrantyBtn.position === '1'; then btnWarrantyTemplate"></div>
+                <div *ngIf="productOrderService.warrantyBtn?.position !== '1' && productOrderService.discountBtn?.position !== '1'; then imgPlus"></div>
             </div>
-            <div class="col-6">
-                <label class="fw-bolder fs-list-item" id="addServiceTitle">{{ productOrderService.title }}</label>
+            <div class="col-9">
+                <label class="fw-bolder fs-list-item" id="addServiceTitle">{{ productOrderService.title.text }}</label>
             </div>
         </div>
     </div>
 
-    <div class="col-2 me-3" *ngIf="productOrderService.showWarrantyBtn">
-        <button type="button" id="btnWarranty" class="btn btn-outline-primary btn-light btn-sm rounded-pill"><i class="bi bi-check-circle"></i> {{ "product.warranty" | translate }}</button>
+    <div class="col-2" *ngIf="productOrderService.warrantyBtn.show && productOrderService.warrantyBtn.position === '4'">
+        <div *ngIf="productOrderService.warrantyBtn?.show && productOrderService.warrantyBtn.position === '4'; then btnWarrantyTemplate"></div>
     </div>
-    <div class="col-2 me-3" *ngIf="productOrderService.serviceBtn.show" [class]="productOrderService.serviceBtn.position">
+    <div [class]="productOrderService.serviceBtn.class" *ngIf="productOrderService.serviceBtn.show">
         <button type="button" id="btnService" class="btn btn-outline-primary btn-light btn-sm rounded-pill"><i class="bi bi-check-circle"></i> {{ "product.service" | translate}}</button>
     </div>
 
-    <cell-data-label class="col-1" *ngFor="let cell of productOrderService.cellLabelValue" style="max-width: 140px;" [value]="cell.value" [label]="cell.label"></cell-data-label>
+    <cell-data-label *ngFor="let cell of productOrderService.cellLabelValue" [value]="cell.value" [class]="cell.colSize" [label]="cell.label"></cell-data-label>
 
     <div class="col-1" *ngIf="productOrderService.showIgnoreBtn" style="max-width: 140px;">
         <button type="button" id="btnIgnore" class="btn btn-outline-primary">{{ "ignore" | translate}}</button>
     </div>
 </div>
+
+<ng-template #btnDiscountTemplate>
+    <a href="#" class="btn btn-outline-primary btn-light btn-sm rounded-pill text-uppercase" [class]="productOrderService.discountBtn.class">
+        <i class="bi bi-check-circle"></i> + {{ "product.discount" | translate}}
+    </a>
+</ng-template>
+<ng-template #btnWarrantyTemplate>
+    <button type="button" id="btnWarranty" class="btn btn-outline-primary btn-light btn-sm rounded-pill" [class]="productOrderService.warrantyBtn.class"><i class="bi bi-check-circle"></i> + {{ "product.warranty" | translate }}</button>
+</ng-template>
+<ng-template #imgPlus>
+    <i class="bi bi-plus" style="font-size: 2rem; color: grey;"></i>
+</ng-template>

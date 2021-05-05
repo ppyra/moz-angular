@@ -16,4 +16,5 @@ export interface CellLabelValue {
   value: string;
   label: string;
   colSize?: string;
+  style?: string;
 }

@@ -13,7 +13,7 @@
             <li class="list-group-item border-0 border-bottom">
                 <product-item [productItemModel]="productItemOrder"></product-item>
             </li>
-            <li class="list-group-item border-0 border-bottom">
+            <!-- <li class="list-group-item border-0 border-bottom">
                 <div class="row align-items-center">
                     <div class="col-1 d-flex align-items-center d-flex justify-content-between">
                         <button type="button" class="btn btn-outline-primary rounded-pill"><i class="bi bi-check-circle"></i> <i class="bi bi-plus"></i>Usługa</button>
@@ -44,9 +44,9 @@
                         </div>
                     </div>
                 </div>
-            </li>
+            </li> -->
             <li class="list-group-item border-0 border-bottom">
-                <div class="row align-items-center">
+                <!-- <div class="row align-items-center">
                     <div class="col-1 d-flex justify-content-between">
                         <button type="button" class="btn btn-outline-primary rounded-pill"><i class="bi bi-check-circle"></i> <i class="bi bi-plus"></i> RABAT</button>
                     </div>
@@ -75,7 +75,12 @@
                             <label class="text-secondary fs-placeholder" id="name">Status</label>
                         </div>
                     </div>
-                </div>
+                </div> -->
+                <product-add-service [productOrderService]="getExtendWarranty()"></product-add-service>
+                <!-- <hr class="w-100"> -->
+            </li>
+            <li class="list-group-item border-0 border-bottom">
+                <product-add-service [productOrderService]="getSocketMax()"></product-add-service>
             </li>
         </ul>
         <div class="row gx-3">

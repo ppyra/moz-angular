@@ -24,7 +24,8 @@ import { ProductOrderListComponent } from './product-order-list/product-order-li
   exports: [
     ProductDetailsComponent,
     ProductItemComponent,
-    PhotoDescriptionComponent
+    PhotoDescriptionComponent,
+    ProductAddServiceComponent
   ],
   providers: [],
 })
