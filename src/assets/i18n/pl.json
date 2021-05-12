@@ -16,7 +16,17 @@
         "settlement_of_accounts": "Rozlicz należność",
         "add_warranty": "Dodaj gwarancję",
         "see_documents": "Zobacz dokumenty",
-        "in_progress": "W realizacji"
+        "in_progress": "W realizacji",
+        "nr_order": "Numer zlecenia",
+        "nr_receipt": "Numer paragonu",
+        "create_date": "Data utworzenia",
+        "clinets_phone": "Numer telefonu klienta",
+        "email": "Adres e-mail",
+        "date_hour_fiscalization": "Data i godzina fiskalizacji",
+        "gross_order_value": "Wartość brutto zamówienia",
+        "sales_magazine": "Magazyn sprzedaży",
+        "search_order": "Wyszukaj zlecenie",
+        "search": "Wyszukaj"
     },
     "product": {
         "count": "Liczba",

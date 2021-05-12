@@ -2,7 +2,7 @@
     <ng-content select="[select-item]"></ng-content>
     <photo-description [class]="productItemModel.imgDescCol.colSize" [imageDescriptionProduct]="productItemModel.imgDescCol" [imgWidth]="100"></photo-description>
     <div *ngIf="productItemModel.showDiscountButton" class="col-2">
-        <a href="#" class="btn btn-outline-secondary btn-light btn-sm rounded-pill text-uppercase"><i class="bi bi-check-circle"></i> {{ "product.discount" | translate}}</a>
+        <a href="#" class="btn btn-outline-secondary btn-light btn-sm rounded-pill text-uppercase" data-bs-toggle="modal" data-bs-target="#searchOrderModal"><i class="bi bi-check-circle"></i> {{ "product.discount" | translate}}</a>
     </div>
     <ng-content select="[numberSpinner]"></ng-content>
     <cell-data-label *ngFor="let cell of productItemModel.cellLabelValue" [class]="cell.colSize" [value]="cell.value" [label]="cell.label"></cell-data-label>

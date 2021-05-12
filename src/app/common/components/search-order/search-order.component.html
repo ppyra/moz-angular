@@ -1,0 +1,56 @@
+<div class="modal fade" id="searchOrderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{ "order.search_order" | translate}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
+            </div>
+            <div class="modal-body">
+                <form (ngSubmit)="onSubmit(order)" [formGroup]="order" class="form-group">
+                    <div class="row">
+                        <div class="col-2">
+                            <input-text class="col-sm-3" formControlName="orderNr">{{'order.nr_order' | translate }}</input-text>
+                        </div>
+                        <div class="col-2">
+                            <input-text class="col-sm-3" formControlName="receiptNr">{{'order.nr_receipt' | translate }}</input-text>
+                        </div>
+                        <div class="col-2">
+                            <input-text class="col-sm-3" formControlName="createDate">{{'order.create_date' | translate }}</input-text>
+                        </div>
+                        <div class="col-2">
+                            <input-text class="col-sm-3" formControlName="clientsPhone">{{'order.clinets_phone' | translate }}</input-text>
+                        </div>
+                        <div class="col-2">
+                            <input-text class="col-sm-3" formControlName="email">{{'order.email' | translate }}</input-text>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-2">
+                            <input-text class="col-sm-3" formControlName="fiscalizationDate">{{'order.date_hour_fiscalization' | translate }}</input-text>
+                        </div>
+                        <div class="col-2">
+                            <input-text class="col-sm-3" formControlName="status">{{'product.status' | translate }}</input-text>
+                        </div>
+                        <div class="col-2">
+                            <input-text class="col-sm-3" formControlName="orderGrossValue">{{'order.gross_order_value' | translate }}</input-text>
+                        </div>
+                        <div class="col-2">
+                            <input-text class="col-sm-3" formControlName="salesMagazine">{{'order.sales_magazine' | translate }}</input-text>
+                        </div>
+                        <div class="col-2">
+                            <date-time-picker [(ngModel)]="dateModel" name="activeEndDate"></date-time-picker>
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-outline-primary rounded-pill text-uppercase mt-3 w-100" data-bs-dismiss="modal">{{ "ignore" | translate}}</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary rounded-pill text-uppercase mt-3 w-100" type="submit">{{ "order.search" | translate}}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

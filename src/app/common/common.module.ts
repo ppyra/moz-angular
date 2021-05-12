@@ -10,6 +10,11 @@ import { NumberSpinnerComponent } from './components/number-spinner/number-spinn
 import { CellDataLabelComponent } from './components/cell-data-label/cell-data-label.component';
 import { RowDataLabelComponent } from './components/row-data-label/row-data-label.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { SearchOrderComponent } from "./components/search-order/search-order.component";
+import { InputTextComponent } from "./components/input-text/input-text.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { DateTimePickerComponent } from "./components/date-time-picker/date-time-picker.component";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   imports: [
@@ -17,6 +22,9 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     CommonModule,
     RouterModule,
     SharedRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule,
     TranslateModule.forChild()
   ],
   declarations: [
@@ -25,6 +33,9 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     NumberSpinnerComponent,
     RowDataLabelComponent,
     CellDataLabelComponent,
+    SearchOrderComponent,
+    InputTextComponent,
+    DateTimePickerComponent,
     BreadcrumbComponent],
   exports: [
     TranslateModule,
@@ -34,7 +45,10 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     NumberSpinnerComponent,
     CellDataLabelComponent,
     RowDataLabelComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    SearchOrderComponent,
+    InputTextComponent,
+    DateTimePickerComponent
   ]
 
 })
